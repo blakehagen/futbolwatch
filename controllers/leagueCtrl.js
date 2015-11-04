@@ -1,4 +1,4 @@
-angular.module('futbolApp').controller('homeCtrl', function ($scope, leagueService) {
+angular.module('futbolApp').controller('leagueCtrl', function ($scope, leagueService) {
 
     $scope.getEPL = function () {
         leagueService.getLeagueData(398).then(function (response) {

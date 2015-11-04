@@ -3,8 +3,20 @@ angular.module('futbolApp', ['ui.router']).config(function ($stateProvider, $url
     $stateProvider
         .state('home', {
             url: '/home',
-            templateUrl: 'app/home/homeTmpl.html',
-            controller: 'homeCtrl'
+            templateUrl: 'templates/homeTmpl.html',
+            controller: 'leagueCtrl'
+        })
+
+        .state('epl', {
+            url: '/englishPremierLeague',
+            templateUrl: 'templates/eplTmpl.html',
+            controller: 'leagueCtrl'
+        })
+
+        .state('spanishPrimera', {
+            url: '/spanishPrimera',
+            templateUrl: 'templates/spanishPrimeraTmpl.html',
+            controller: 'leagueCtrl'
         })
 
     $urlRouterProvider

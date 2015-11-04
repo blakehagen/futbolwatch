@@ -1,4 +1,4 @@
-angular.module('futbolApp').directive('leagueDisplay', function () {
+angular.module('futbolApp').directive('leagueStandings', function () {
     return {
         templateUrl: 'templates/leaguesTmpl.html',
 
