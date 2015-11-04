@@ -3,9 +3,12 @@ angular.module('futbolApp', ['ui.router']).config(function ($stateProvider, $url
     $stateProvider
         .state('home', {
             url: '/home',
-            templateUrl: 'homeTmpl.html',
+            templateUrl: 'js/home/homeTmpl.html',
             controller: 'homeCtrl'
         })
+
+    $urlRouterProvider
+        .otherwise('/home');
 
 
 

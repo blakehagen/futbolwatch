@@ -1,7 +1,5 @@
 angular.module('futbolApp').service('homeService', function ($http, $q) {
 
-
-
     this.getPremierLeagueData = function () {
         var deferred = $q.defer();
         $http({
