@@ -1,0 +1,16 @@
+.league-table-row {
+    width: 450px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-item {
+    /*border: 1px solid darkblue;*/
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+}
+
+.big {
+    width: 230px;
+    text-align: left;
+}

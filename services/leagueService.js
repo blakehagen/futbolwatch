@@ -5,10 +5,9 @@ angular.module('futbolApp').service('leagueService', function ($http, $q) {
         $http({
             method: 'GET',
             url: 'http://api.football-data.org/alpha/soccerseasons/' + leagueID + '/leagueTable',
-            headers: {'X-Auth-Token': '57d24f023e8247aea4badd00e37328dc'}
+            headers: { 'X-Auth-Token': '57d24f023e8247aea4badd00e37328dc' }
         }).then(function (response) {
             // console.log(response.data);
-
             var leagueData = response.data.standing;
             var leagueStandings = [];
 
@@ -17,17 +16,16 @@ angular.module('futbolApp').service('leagueService', function ($http, $q) {
                     league: response.data.leagueCaption,
                     team: leagueData[i].teamName,
                     position: leagueData[i].position,
-                    points: leagueData[i].points
+                    points: leagueData[i].points,
+                    wins: leagueData[i].wins,
+                    losses: leagueData[i].losses,
+                    draws: leagueData[i].draws,
+                    gamesPlayed: leagueData[i].playedGames
                 });
             }
-            // console.log(leagueStandings);
+            console.log(leagueStandings);
             deferred.resolve(leagueStandings)
         })
         return deferred.promise
     }
-
-
-
-
-
 });
