@@ -3,7 +3,7 @@ angular.module('futbolApp', ['ui.router']).config(function ($stateProvider, $url
     $stateProvider
         .state('home', {
             url: '/home',
-            templateUrl: 'js/home/homeTmpl.html',
+            templateUrl: 'app/home/homeTmpl.html',
             controller: 'homeCtrl'
         })
 
