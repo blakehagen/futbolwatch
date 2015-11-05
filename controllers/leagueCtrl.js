@@ -1,10 +1,10 @@
 angular.module('futbolApp').controller('leagueCtrl', function ($scope, leagueService) {
 
 
-    $scope.league = true;
-    $scope.toggleLeague = function () {
-        $scope.league = !$scope.league;
-    };
+    // $scope.league = false;
+    // $scope.toggleLeague = function () {
+    //     $scope.league = !$scope.league;
+    // };
 
 
     $scope.getEPL = function () {
@@ -22,7 +22,7 @@ angular.module('futbolApp').controller('leagueCtrl', function ($scope, leagueSer
     $scope.getBundesliga = function () {
         leagueService.getLeagueData(394).then(function (response) {
             $scope.bundesliga = response;
-            $scope.tableHeader = true;
+            // $scope.tableHeader = true;
         })
     }
 

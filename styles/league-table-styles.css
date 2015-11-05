@@ -1,3 +1,15 @@
+.league-table-wrapper {
+    width: 450px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    margin: 30px 50px;
+}
+
+.center-strong {
+    text-align: center;
+    font-weight: 400;
+}
+
 .league-table-row {
     width: 450px;
     border-bottom: 1px solid #ddd;

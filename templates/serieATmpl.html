@@ -1,10 +1,23 @@
-<div>
-    <h1>Serie A</h1>
-</div>
+<header>
+    <div class="header-item">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f7/LegaSerieAlogoTIM.png">
+    </div>
 
-<div ng-click="getSerieA()">
-    <div>
+    <div class="header-item">
+        <div class="header-sub-item">
+            <img class="flag" src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1500px-Flag_of_Italy.svg.png">
+        </div>
+
+        <div class="header-sub-item">
+            <h1>Serie A</h1>
+        </div>
+    </div>
+</header>
+
+<div class="sub-menu" ng-click="getSerieA()">
+    <div class="sub-menu-item pointer">
         <h3>League Table</h3>
     </div>
 </div>
+
 <league-standings league="serieA"></league-standings>
