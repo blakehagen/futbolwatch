@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    margin:0;
 }
 
 a {
@@ -13,7 +14,6 @@ a:visited {
 html, body {
     width: 100%;
     height: 100%;
-    margin:0;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -68,6 +68,7 @@ header {
 .flag {
     height: 20px;
     margin-top: 51px;
+    border: 1px solid #eee;
 }
 
 /* // // // // // // // // // // // */
@@ -104,6 +105,48 @@ header {
     /*border: 1px solid mediumpurple;*/
     vertical-align: top;
 }
+
+/* // // // // // // // // // // // */
+
+/* // // // Footer // // // */
+
+.page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -40px; 
+    border: 1px solid #fff;
+}
+
+.page-wrap:after {
+    content: "";
+    display: block;
+}
+
+.footer, .page-wrap:after {
+    height: 40px; 
+}
+
+.footer {
+     width: 100%;
+     border-top: 1px solid #ddd;
+}
+
+    .footer h6 {
+        font-size: 10px;
+        color: lightslategray;
+        line-height: 40px;
+        font-weight: 100;
+        margin: 0;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
 
 /* // // // // // // // // // // // */
 
