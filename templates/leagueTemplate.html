@@ -1,0 +1,25 @@
+<header>
+    <div class="header-item">
+        <img ng-src="{{leagueLogoPath}}">
+    </div>
+
+    <div class="header-item">
+        <div class="header-sub-item">
+            <img class="flag" ng-src="{{flagPath}}">
+        </div>
+
+        <div class="header-sub-item">
+            <h1>{{leagueHeader}}</h1>
+        </div>
+    </div>
+</header>
+
+<div class="sub-menu">
+    <div class="sub-menu-item pointer" ng-click="getStandings()">
+        <h3>League Table</h3>
+    </div>
+    <div class="sub-menu-item pointer">
+        <h3>Upcoming Fixtures</h3>
+    </div>
+</div>
+<league-standings league="league" ng-show="toggleStandings"></league-standings>

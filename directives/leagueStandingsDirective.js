@@ -5,12 +5,5 @@ angular.module('futbolApp').directive('leagueStandings', function () {
         scope: {
             league: '='
         }
-
     }
-
-
-
-
-
-
 });
