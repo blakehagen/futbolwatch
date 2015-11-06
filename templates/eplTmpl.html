@@ -14,9 +14,12 @@
     </div>
 </header>
 
-<div class="sub-menu" ng-click="getEPL()">
-    <div class="sub-menu-item pointer">
+<div class="sub-menu">
+    <div class="sub-menu-item pointer" ng-click="getEPL()">
         <h3>League Table</h3>
     </div>
+    <div class="sub-menu-item pointer">
+        <h3>Upcoming Fixtures</h3>
+    </div>
 </div>
-<league-standings league="epl"></league-standings>
+<league-standings league="epl" ng-show="toggleStandings"></league-standings>

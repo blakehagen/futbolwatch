@@ -14,10 +14,10 @@
     </div>
 </header>
 
-<div class="sub-menu" ng-click="getSpanPrimera()">
-    <div class="sub-menu-item pointer">
+<div class="sub-menu">
+    <div class="sub-menu-item pointer" ng-click="getSpanPrimera()">
         <h3>League Table</h3>
     </div>
 </div>
 
- <league-standings league="spanish"></league-standings>
+ <league-standings league="spanish" ng-show="toggleStandings"></league-standings>

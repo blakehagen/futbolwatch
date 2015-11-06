@@ -14,10 +14,10 @@
     </div>
 </header>
 
-<div class="sub-menu" ng-click="getPortugalPrimeira()">
-    <div class="sub-menu-item pointer">
+<div class="sub-menu" >
+    <div class="sub-menu-item pointer" ng-click="getPortugalPrimeira()">
         <h3>League Table</h3>
     </div>
 </div>
 
-<league-standings league="portugalPrimeira"></league-standings>
+<league-standings league="portugalPrimeira" ng-show="toggleStandings"></league-standings>

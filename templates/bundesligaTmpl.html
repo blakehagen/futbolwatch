@@ -14,8 +14,8 @@
     </div>
 </header>
 
-<div class="sub-menu" ng-click="getBundesliga()">
-    <div class="sub-menu-item pointer">
+<div class="sub-menu">
+    <div class="sub-menu-item pointer" ng-click="getBundesliga()">
         <h3>League Table</h3>
     </div>
 
@@ -24,4 +24,4 @@
     </div>
 </div>
 
-<league-standings league="bundesliga"></league-standings>
+<league-standings league="bundesliga" ng-show="toggleStandings"></league-standings>

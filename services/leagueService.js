@@ -23,7 +23,7 @@ angular.module('futbolApp').service('leagueService', function ($http, $q) {
                     gamesPlayed: leagueData[i].playedGames
                 });
             }
-            console.log(leagueStandings);
+            // console.log(leagueStandings);
             deferred.resolve(leagueStandings)
         })
         return deferred.promise

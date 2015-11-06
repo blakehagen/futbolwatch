@@ -1,54 +1,73 @@
 angular.module('futbolApp').controller('leagueCtrl', function ($scope, leagueService) {
 
 
-    // $scope.league = false;
-    // $scope.toggleLeague = function () {
-    //     $scope.league = !$scope.league;
-    // };
+    $scope.toggleStandings = false;
 
 
     $scope.getEPL = function () {
-        leagueService.getLeagueData(398).then(function (response) {
-            $scope.epl = response;
-        })
+        if ($scope.toggleStandings === false) {
+            leagueService.getLeagueData(398).then(function (response) {
+                $scope.epl = response;
+            })
+        }
+        $scope.toggleStandings = !$scope.toggleStandings;
     }
 
     $scope.getSpanPrimera = function () {
-        leagueService.getLeagueData(399).then(function (response) {
-            $scope.spanish = response;
-        })
+        if ($scope.toggleStandings === false) {
+            leagueService.getLeagueData(399).then(function (response) {
+                $scope.spanish = response;
+            })
+        }
+        $scope.toggleStandings = !$scope.toggleStandings;
     }
 
     $scope.getBundesliga = function () {
-        leagueService.getLeagueData(394).then(function (response) {
-            $scope.bundesliga = response;
-            // $scope.tableHeader = true;
-        })
+        if ($scope.toggleStandings === false) {
+            leagueService.getLeagueData(394).then(function (response) {
+                $scope.bundesliga = response;
+            })
+        }
+        $scope.toggleStandings = !$scope.toggleStandings;
     }
 
     $scope.getSerieA = function () {
-        leagueService.getLeagueData(401).then(function (response) {
-            $scope.serieA = response;
-        })
+        if ($scope.toggleStandings === false) {
+            leagueService.getLeagueData(401).then(function (response) {
+                $scope.serieA = response;
+            })
+        }
+        $scope.toggleStandings = !$scope.toggleStandings;
     }
 
     $scope.getLigue1 = function () {
-        leagueService.getLeagueData(396).then(function (response) {
-            $scope.ligue1 = response;
-        })
+        if ($scope.toggleStandings === false) {
+            leagueService.getLeagueData(396).then(function (response) {
+                $scope.ligue1 = response;
+            })
+        }
+        $scope.toggleStandings = !$scope.toggleStandings;
     }
 
     $scope.getPortugalPrimeira = function () {
-        leagueService.getLeagueData(402).then(function (response) {
-            $scope.portugalPrimeira = response;
-        })
+        if ($scope.toggleStandings === false) {
+            leagueService.getLeagueData(402).then(function (response) {
+                $scope.portugalPrimeira = response;
+            })
+        }
+        $scope.toggleStandings = !$scope.toggleStandings;
     }
 
     $scope.getEredivisie = function () {
-        leagueService.getLeagueData(404).then(function (response) {
-            $scope.eredivisie = response;
-        })
+        if ($scope.toggleStandings === false) {
+            leagueService.getLeagueData(404).then(function (response) {
+                $scope.eredivisie = response;
+            })
+        }
+        $scope.toggleStandings = !$scope.toggleStandings;
     }
+    
+    
 
     // $scope.getChampionsLeague = function () {
     //     leagueService.getLeagueData(---).then(function (response) {

@@ -14,10 +14,10 @@
     </div>
 </header>
 
-<div class="sub-menu" ng-click="getEredivisie()">
-    <div class="sub-menu-item pointer">
+<div class="sub-menu">
+    <div class="sub-menu-item pointer" ng-click="getEredivisie()">
         <h3>League Table</h3>
     </div>
 </div>
 
-<league-standings league="eredivisie"></league-standings>
+<league-standings league="eredivisie" ng-show="toggleStandings"></league-standings>
