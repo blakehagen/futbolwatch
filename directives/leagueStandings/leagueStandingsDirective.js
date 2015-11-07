@@ -1,6 +1,6 @@
 angular.module('futbolApp').directive('leagueStandings', function () {
     return {
-        templateUrl: 'templates/directive-templates/leagueStandingsTmpl.html',
+        templateUrl: 'directives/leagueStandings/leagueStandingsTmpl.html',
 
         scope: {
             league: '='
