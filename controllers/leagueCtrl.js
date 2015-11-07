@@ -1,4 +1,4 @@
-angular.module('futbolApp').controller('leagueCtrl', function ($scope, $stateParams, leagueService) {
+angular.module('futbolApp').controller('leagueCtrl', function ($scope, $stateParams, leagueService, upcomingMatchesService) {
 
     if ($stateParams.league === 'epl') {
         $scope.leagueId = 398;
@@ -46,6 +46,17 @@ angular.module('futbolApp').controller('leagueCtrl', function ($scope, $statePar
             })
         }
         $scope.toggleStandings = !$scope.toggleStandings;
-    }
+    };
+
+    $scope.getUpComingMatches = function () {
+        upcomingMatchesService.getNextMatches($scope.leagueId).then(function (response) {
+            $scope.nextMatches = response;
+        })
+    };
+    
+    
+    
+    
+    
 
 });

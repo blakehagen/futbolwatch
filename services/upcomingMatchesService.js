@@ -6,9 +6,12 @@ angular.module('futbolApp').service('upcomingMatchesService', function ($http, $
             method: 'GET',
             url: 'http://api.football-data.org/alpha/soccerseasons/' + leagueId + '/fixtures/?timeFrame=n7',
             headers: { 'X-Auth-Token': '57d24f023e8247aea4badd00e37328dc' }
+        }).then(function (response) {
+            console.log(response.data.fixtures);
 
+            deferred.resolve(response)
         })
-
+        return deferred.promise
     }
 
 
