@@ -48,7 +48,7 @@ angular.module('futbolApp').controller('leagueCtrl', function ($scope, $statePar
         $scope.toggleStandings = !$scope.toggleStandings;
     };
 
-    $scope.getUpComingMatches = function () {
+    $scope.getComingMatches = function () {
         upcomingMatchesService.getNextMatches($scope.leagueId).then(function (response) {
             $scope.nextMatches = response;
         })
