@@ -21,5 +21,4 @@ angular.module('waterCoolerFC', ['ui.router']).config(function ($stateProvider, 
 
     $urlRouterProvider
         .otherwise('/home');
-
 });

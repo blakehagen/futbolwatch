@@ -52,7 +52,4 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
             }
         }
     }
-
-
-
 });

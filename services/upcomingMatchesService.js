@@ -22,5 +22,4 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
         })
         return deferred.promise
     }
-
 });
