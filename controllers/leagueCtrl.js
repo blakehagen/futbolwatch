@@ -1,4 +1,4 @@
-angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $stateParams, leagueService, upcomingMatchesService, idService) {
+angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, leagueService, upcomingMatchesService, idService) {
     
     // Get League ID from idService
     $scope.id = function(){
