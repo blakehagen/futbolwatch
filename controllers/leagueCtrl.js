@@ -17,7 +17,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $stat
         $scope.leagueHeader = "German Bundesliga";
     } else if ($stateParams.league === 'eredivisie') {
         $scope.leagueId = 404;
-        $scope.leagueLogoPath = 'https://upload.wikimedia.org/wikipedia/ar/b/b7/271px-Eredivisie_logo.svg.png';
+        $scope.leagueLogoPath = 'http://worldsoccertalk.com/wp-content/uploads/2015/04/eredivisie-logo.jpg';
         $scope.flagPath = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/900px-Flag_of_the_Netherlands.svg.png';
         $scope.leagueHeader = "Dutch Eredivisie";
     } else if ($stateParams.league === 'serie-a') {
