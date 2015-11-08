@@ -18,8 +18,9 @@
     <div class="sub-menu-item pointer" ng-click="getStandings()">
         <h3>League Table</h3>
     </div>
-    <div class="sub-menu-item pointer"" ng-click="getComingMatches()">
-        <h3>Upcoming Fixtures</h3>
+    <div class="sub-menu-item pointer" ng-click="getNextMatches()">
+        <h3>Upcoming Matches</h3>
     </div>
 </div>
 <league-standings league="league" ng-show="toggleStandings"></league-standings>
+<upcoming-matches next="next" ng-show="toggleNextMatches"></upcoming-matches>

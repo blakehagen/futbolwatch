@@ -1,12 +1,9 @@
-angular.module('futbolApp').directive('upcomingMatches', function () {
+angular.module('waterCoolerFC').directive('upcomingMatches', function () {
     return {
-        // templateUrl: 
+        templateUrl: 'directives/upcomingMatches/upcomingMatchesTmpl.html',
+        
+        scope: {
+            next: '='
+        }
     }
-
-
-
-
-
-
-
 });

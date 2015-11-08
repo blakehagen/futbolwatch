@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="futbolApp">
+<html lang="en" ng-app="waterCoolerFC">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/league-table-styles.css">
+    <link rel="stylesheet" href="styles/league-tmpl-styles.css">
 </head>
 
 <body>
@@ -16,11 +16,13 @@
     </div>
 
     <div class="footer">
-        <h6>A Blake Hagen Production</h6>
+        <h6>WaterCooler FC &copy; 2015 | A Blake Hagen Production</h6>
     </div>
 
     <script src='https://code.angularjs.org/1.4.7/angular.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js'></script>
+
     <script src='app.js'></script>
     <script src='controllers/leagueCtrl.js'></script>
 
@@ -28,7 +30,10 @@
     <script src='services/upcomingMatchesService.js'></script>
 
     <script src='directives/leagueStandings/leagueStandingsDirective.js'></script>
-        <script src='directives/upcomingMatches/upcomingMatchesDirective.js'></script>
+    <script src='directives/upcomingMatches/upcomingMatchesDirective.js'></script>
+
+
+
 </body>
 
 </html>

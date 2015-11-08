@@ -1,4 +1,4 @@
-angular.module('futbolApp').service('leagueService', function ($http, $q) {
+angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
 
     this.getLeagueData = function (leagueId) {
         var deferred = $q.defer();

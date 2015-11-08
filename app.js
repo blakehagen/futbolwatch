@@ -1,4 +1,4 @@
-angular.module('futbolApp', ['ui.router']).config(function ($stateProvider, $urlRouterProvider) {
+angular.module('waterCoolerFC', ['ui.router']).config(function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider
         .state('home', {

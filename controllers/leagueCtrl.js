@@ -1,4 +1,4 @@
-angular.module('futbolApp').controller('leagueCtrl', function ($scope, $stateParams, leagueService, upcomingMatchesService) {
+angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $stateParams, leagueService, upcomingMatchesService) {
 
     if ($stateParams.league === 'epl') {
         $scope.leagueId = 398;
@@ -42,21 +42,22 @@ angular.module('futbolApp').controller('leagueCtrl', function ($scope, $statePar
     $scope.getStandings = function () {
         if ($scope.toggleStandings === false) {
             leagueService.getLeagueData($scope.leagueId).then(function (response) {
-                $scope.league = response
+                $scope.league = response;
             })
         }
         $scope.toggleStandings = !$scope.toggleStandings;
+        $scope.toggleNextMatches = false;
     };
 
-    $scope.getComingMatches = function () {
-        upcomingMatchesService.getNextMatches($scope.leagueId).then(function (response) {
-            $scope.nextMatches = response;
-        })
-    };
-    
-    
-    
-    
-    
+    $scope.toggleNextMatches = false;
 
+    $scope.getNextMatches = function () {
+        if ($scope.toggleNextMatches === false) {
+            upcomingMatchesService.getNextMatches($scope.leagueId).then(function (response) {
+                $scope.next = response;
+            })
+        }
+        $scope.toggleNextMatches = !$scope.toggleNextMatches;
+        $scope.toggleStandings = false;
+    };
 });

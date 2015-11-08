@@ -1,0 +1,61 @@
+/* * * * * LEAGUE TMPL TABLE STYLES * * * * */
+
+.table-wrapper {
+    width: 450px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    margin: 30px 50px 20px 50px;
+    /*border: 1px solid indianred;*/
+}
+
+.center-strong {
+    text-align: center;
+    font-weight: 400;
+}
+
+.table-row {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    /*border: 1px solid green;*/
+}
+
+.table-item {
+    /*border: 1px solid darkblue;*/
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+}
+
+.big {
+    width: 230px;
+    text-align: left;
+}
+
+/* * * * * UPCOMING MATCHES STYLES * * * * */
+
+.main-wrap {
+    margin-bottom: 10px;
+}
+
+.team {
+    width: 240px;
+    display: inline-block;
+}
+
+.matches {
+    width: 810px;
+}
+
+.time {
+    width: 250px;
+    margin: -15px 0 0 75px;
+}
+
+.date {
+    text-align: left;
+    padding-left: 15px;
+    width: 280px;
+    display: inline-block
+}
+
+
