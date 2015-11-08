@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+
     <title>WaterCooler FC</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -21,9 +23,19 @@
         <h6>WaterCooler FC &copy; 2015 | A Blake Hagen Production</h6>
     </div>
 
+
     <script src='https://code.angularjs.org/1.4.7/angular.js'></script>
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js'></script>
+
+    <script async defer src=" https://maps.googleapis.com/maps/api/js?key=AIzaSyDMoumROCnE3aJDUvP8s7YEtuDvwxIv_R4&callback=initMap ">
+
+    </script>
+
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js'></script>
+
+
 
     <script src='app.js'></script>
     <script src='controllers/leagueCtrl.js'></script>
@@ -31,9 +43,11 @@
     <script src='services/leagueService.js'></script>
     <script src='services/upcomingMatchesService.js'></script>
     <script src='services/idService.js'></script>
+    <script src='services/mapService.js'></script>
 
     <script src='directives/leagueStandings/leagueStandingsDirective.js'></script>
     <script src='directives/upcomingMatches/upcomingMatchesDirective.js'></script>
+    <script src='directives/maps/mapsDirective.js'></script>
 </body>
 
 </html>
