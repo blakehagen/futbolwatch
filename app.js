@@ -13,6 +13,12 @@ angular.module('waterCoolerFC', ['ui.router']).config(function ($stateProvider, 
             controller: 'leagueCtrl',
         })
 
+        .state('about', {
+            url: '/about',
+            templateUrl: 'templates/aboutTemplate.html',
+            controller: 'leagueCtrl',
+        })
+
     $urlRouterProvider
         .otherwise('/home');
 
