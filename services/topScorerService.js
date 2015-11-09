@@ -6,21 +6,33 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
             method: 'GET',
             url: 'https://www.kimonolabs.com/api/' + id + '?apikey=Gw5PcHFe2RGyDfn2GJlUBynbruB41WWo'
         }).then(function (response) {
-            // console.log(response.data.results.collection);
             var topScorersData = response.data.results.collection;
+
+            // Format Names to not be all UPPERCase --> to be used in pushing info in final array
+            var formatName = function (str) {
+                var formatted;
+                var arr = str.toLowerCase().split(' ');
+                var caps = [];
+                for (var i = 0; i < arr.length; i++) {
+                    caps.push(arr[i].charAt(0).toUpperCase() + arr[i].slice(1));
+                }
+                formatted = caps.join(' ');
+                return formatted;
+            }
+
             var topScorers = [];
 
             for (var i = 0; i < topScorersData.length; i++) {
                 topScorers.push({
                     rank: topScorersData[i].rank,
-                    name: topScorersData[i].name,
+                    name: formatName(topScorersData[i].name),
                     team: topScorersData[i].team,
                     goals: topScorersData[i].goals,
                     penalties: topScorersData[i].penalties,
                     matches: topScorersData[i].matchesPlayed
                 })
             }
-            // console.log(topScorers);
+            console.log(topScorers);
             deferred.resolve(topScorers)
         })
         return deferred.promise
