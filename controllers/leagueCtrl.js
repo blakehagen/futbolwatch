@@ -1,4 +1,4 @@
-angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, leagueService, upcomingMatchesService, idService) {
+angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idService, leagueService, upcomingMatchesService, previousMatchService) {
     
     // Get League ID from idService
     $scope.id = function () {
@@ -32,6 +32,16 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, leagu
         $scope.toggleNextMatches = !$scope.toggleNextMatches;
         $scope.toggleStandings = false;
     };
+    
+    // Get Previous Matches
+    
+    $scope.getPreviousMatches = function(){
+        previousMatchService.getPreviousMatches($scope.leagueData.leagueId).then(function(response){
+            $scope.previous = response;
+        })
+    };
+    
+    $scope.getPreviousMatches();
     
     
 });
