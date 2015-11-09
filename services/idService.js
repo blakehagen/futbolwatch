@@ -52,7 +52,7 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
             }
         } else if ($stateParams.league === 'champions-league') {
             return {
-                leagueId: 396,
+                leagueId: 405,
                 leagueLogoPath: 'assets/champions-league.png',
                 flagPath: 'assets/uefa.gif',
                 leagueHeader: "UEFA Champions League"
