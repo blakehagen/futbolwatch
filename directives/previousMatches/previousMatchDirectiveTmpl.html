@@ -1,1 +1,35 @@
+<div class="filter-container" ng-show="previous">
+    <h5>Filter Container</h5>
+</div>
 
+
+<div class="table-wrapper previous" ng-show="previous">
+    <div class="table-row">
+        <div class="table-item matchDay center">
+            <h5 class="center-strong">Match</h5>
+        </div>
+        <div class="table-item date-previous">
+            <h5 class="center-strong"> Date</h5>
+        </div>
+        <div class="table-item team-header">
+            <h5 class="center-strong">Home Team</h5>
+        </div>
+        <div class="table-item team-header">
+            <h5 class="center-strong">Away Team</h5>
+        </div>
+    </div>
+    <div class="table-row" ng-repeat="match in previous">
+        <div class="table-item matchDay">
+            <h5>{{match.matchDay}}</h5>
+        </div>
+        <div class="table-item date date-previous">
+            <h5> {{match.date}}</h5>
+        </div>
+        <div class="table-item team">
+            <h5>{{match.homeTeam}} &nbsp;-&nbsp; {{match.homeTeamGoals}}</h5>
+        </div>
+        <div class="table-item team">
+            <h5>{{match.awayTeam}} &nbsp;-&nbsp; {{match.awayTeamGoals}}</h5>
+        </div>
+    </div>
+</div>

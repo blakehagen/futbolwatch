@@ -18,6 +18,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         }
         $scope.toggleStandings = !$scope.toggleStandings;
         $scope.toggleNextMatches = false;
+        $scope.togglePreviousMatches = false;
     };
     
     // Get Upcoming Matches
@@ -31,17 +32,24 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         }
         $scope.toggleNextMatches = !$scope.toggleNextMatches;
         $scope.toggleStandings = false;
+        $scope.togglePreviousMatches = false;
     };
     
     // Get Previous Matches
-    
-    $scope.getPreviousMatches = function(){
-        previousMatchService.getPreviousMatches($scope.leagueData.leagueId).then(function(response){
-            $scope.previous = response;
-        })
+    $scope.togglePreviousMatches = false;
+
+    $scope.getPreviousMatches = function () {
+        if ($scope.togglePreviousMatches === false) {
+            previousMatchService.getPreviousMatches($scope.leagueData.leagueId).then(function (response) {
+                $scope.previous = response;
+            })
+        }
+        $scope.togglePreviousMatches = !$scope.togglePreviousMatches;
+        $scope.toggleStandings = false;
+        $scope.toggleNextMatches = false;
     };
-    
-    $scope.getPreviousMatches();
-    
-    
+
+
+
+
 });

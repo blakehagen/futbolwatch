@@ -38,12 +38,14 @@
 }
 
 .team {
-    width: 240px;
+    width: 260px;
     display: inline-block;
+    text-align: left;
+    padding-left: 40px;
 }
 
 .matches {
-    width: 810px;
+    width: 825px;
 }
 
 .time {
@@ -54,6 +56,38 @@
 .date {
     text-align: left;
     padding-left: 15px;
-    width: 280px;
+    width: 250px;
     display: inline-block
+}
+
+
+/* * * * * PREVIOUS MATCHES STYLES * * * * */
+
+.previous {
+    width: 810px;
+}
+
+.matchDay {
+    width: 70px;
+}
+
+.date-previous {
+    width: 175px;
+}
+
+.filter-container {
+    width: 100%;
+    height: 40px;
+    margin-top: 30px;
+    border: 1px solid #ddd;
+}
+
+.team-header {
+    width: 260px;
+    display: inline-block;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
 }

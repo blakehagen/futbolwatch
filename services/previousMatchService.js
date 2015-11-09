@@ -7,8 +7,22 @@ angular.module('waterCoolerFC').service('previousMatchService', function ($http,
             url: 'http://api.football-data.org/alpha/soccerseasons/' + leagueId + '/fixtures/?timeFrame=p14',
             headers: { 'X-Auth-Token': '57d24f023e8247aea4badd00e37328dc' }
         }).then(function (response) {
-            console.log(response.data.fixtures);
-            deferred.resolve(response)
+            // console.log(response.data.fixtures);
+            var previousFixtures = response.data.fixtures;
+            var previous = [];
+            
+            for(var i = 0; i < previousFixtures.length; i++){
+                previous.push({
+                    date: moment(previousFixtures[i].date).format('ddd, MMM D, YYYY'),
+                    matchDay: previousFixtures[i].matchday,
+                    homeTeam: previousFixtures[i].homeTeamName,
+                    homeTeamGoals: previousFixtures[i].result.goalsHomeTeam,
+                    awayTeam: previousFixtures[i].awayTeamName,
+                    awayTeamGoals: previousFixtures[i].result.goalsAwayTeam
+                })
+            }
+            console.log(previous);
+            deferred.resolve(previous)
         })
         return deferred.promise
     }

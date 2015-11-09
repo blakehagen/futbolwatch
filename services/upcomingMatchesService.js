@@ -13,7 +13,7 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
             
             for(var i = 0; i < upcomingFixtures.length; i++){
                 upcoming.push({
-                    matchDate: moment(upcomingFixtures[i].date).format('dddd, MMM D, YYYY  -  h:mma'),
+                    matchDate: moment(upcomingFixtures[i].date).format('ddd, MMM D, YYYY  -  h:mma'),
                     homeTeam: upcomingFixtures[i].homeTeamName,
                     awayTeam: upcomingFixtures[i].awayTeamName
                 })

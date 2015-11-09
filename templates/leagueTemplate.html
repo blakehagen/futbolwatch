@@ -21,13 +21,16 @@
     <div class="sub-menu-item pointer" ng-click="getNextMatches()">
         <h3>Upcoming Matches</h3>
     </div>
-    <div class="sub-menu-item pointer">
+    <div class="sub-menu-item pointer" ng-click="getPreviousMatches()">
         <h3>Previous Matches</h3>
     </div>
     <div class="sub-menu-item pointer">
         <h3>Leading Scorers</h3>
     </div>
 </div>
+
 <league-standings league="league" ng-show="toggleStandings"></league-standings>
+
 <upcoming-matches next="next" ng-show="toggleNextMatches"></upcoming-matches>
-<previous-matches previous="previous"></previous-matches>
+
+<previous-matches previous="previous" ng-show="togglePreviousMatches"></previous-matches>
