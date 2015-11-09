@@ -21,7 +21,7 @@ angular.module('waterCoolerFC').service('previousMatchService', function ($http,
                     awayTeamGoals: previousFixtures[i].result.goalsAwayTeam
                 })
             }
-            console.log(previous);
+            // console.log(previous);
             deferred.resolve(previous)
         })
         return deferred.promise

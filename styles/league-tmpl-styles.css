@@ -90,18 +90,18 @@
     height: 40px;
     margin: 30px 0 0 50px;
     /*border: 1px solid #ddd;*/
-    text-align: center;
+    text-align: left;
 }
 
 .filter-sub-container {
-    width: 45%;
+    width: 330px;
     height: 100%;
     /*border: 1px solid darkblue;*/
+    margin: 0 6px;
     display: inline-block;
 }
 
 .filter-type {
-    width: 100px;
     height: 100%;
     /*border: 1px solid deeppink;*/
     line-height: 40px;
@@ -109,12 +109,16 @@
 }
 
 .filter-item {
-    width: 215px;
+    width: 210px;
     height: 100%;
     border: 1px solid #ddd;
     border-radius: 30px;
     display: inline-block;
     vertical-align: top;
+    padding-left: 18px;
+    font-size: 15px;
+    font-weight: 100;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .filter-text {
@@ -126,3 +130,10 @@
     width: 50px;
 }
 
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
