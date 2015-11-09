@@ -20,15 +20,9 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
                     matches: topScorersData[i].matchesPlayed
                 })
             }
-            console.log(topScorers);
+            // console.log(topScorers);
             deferred.resolve(topScorers)
         })
         return deferred.promise
     }
-
-
-
-
-
-
 });

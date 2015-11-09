@@ -24,7 +24,7 @@
     <div class="sub-menu-item pointer" ng-click="getPreviousMatches()">
         <h3>Results</h3>
     </div>
-    <div class="sub-menu-item pointer">
+    <div class="sub-menu-item pointer" ng-click="getScorers()">
         <h3>Top Scorers</h3>
     </div>
 </div>
@@ -34,3 +34,5 @@
 <upcoming-matches next="next" ng-show="toggleNextMatches"></upcoming-matches>
 
 <previous-matches previous="previous" ng-show="togglePreviousMatches"></previous-matches>
+
+<top-scorers scorers="scorers" ng-show="toggleTopScorers"></top-scorers>

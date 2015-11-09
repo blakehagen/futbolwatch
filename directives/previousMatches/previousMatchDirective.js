@@ -8,7 +8,6 @@ angular.module('waterCoolerFC').directive('previousMatches', function () {
 
         controller: function ($scope) {
             // Filter by Match Day on Previous Matches Tab
-        
             $scope.matchDayOptions = [
                 { 'matchDay': undefined, 'text': '-' },
                 { 'matchDay': 1, 'text': '1' },
@@ -32,11 +31,6 @@ angular.module('waterCoolerFC').directive('previousMatches', function () {
                 { 'matchDay': 19, 'text': '19' },
                 { 'matchDay': 20, 'text': '20' }
             ];
-
         }
     }
-
-
-
-
 });

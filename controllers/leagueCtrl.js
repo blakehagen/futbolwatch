@@ -19,6 +19,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         $scope.toggleStandings = !$scope.toggleStandings;
         $scope.toggleNextMatches = false;
         $scope.togglePreviousMatches = false;
+        $scope.toggleTopScorers === false;
     };
     
     // Get Upcoming Matches
@@ -33,6 +34,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         $scope.toggleNextMatches = !$scope.toggleNextMatches;
         $scope.toggleStandings = false;
         $scope.togglePreviousMatches = false;
+        $scope.toggleTopScorers === false;
     };
     
     // Get Previous Matches
@@ -47,18 +49,22 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         $scope.togglePreviousMatches = !$scope.togglePreviousMatches;
         $scope.toggleStandings = false;
         $scope.toggleNextMatches = false;
+        $scope.toggleTopScorers === false;
     };
     
-        // Get Top Scorers
-        
-        $scope.getScorers = function(){
-            topScorerService.getTopScorers($scope.leagueData.topScorerId).then(function(response){
+    // Get Top Scorers
+    $scope.toggleTopScorers = false;
+
+    $scope.getScorers = function () {
+        if ($scope.toggleTopScorers === false) {
+            topScorerService.getTopScorers($scope.leagueData.topScorerId).then(function (response) {
                 $scope.scorers = response;
+                console.log($scope.scorers);
             })
         }
-        
-        $scope.getScorers();
-    
-
-
+        $scope.toggleTopScorers = !$scope.toggleTopScorers;
+        $scope.togglePreviousMatches = false;
+        $scope.toggleStandings = false;
+        $scope.toggleNextMatches = false;
+    };
 });
