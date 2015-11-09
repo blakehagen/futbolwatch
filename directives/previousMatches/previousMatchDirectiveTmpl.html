@@ -1,7 +1,42 @@
 <div class="filter-container" ng-show="previous">
-    <h5>Filter Container</h5>
-</div>
+    <div class="filter-sub-container">
+        <div class="filter-type">
+            <h6 class="filter-text">Filter by Match</h6>
+        </div>
 
+        <select class="filter-item match-filter">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+        </select>
+    </div>
+    <div class="filter-sub-container">
+        <div class="filter-type">
+            <h6 class="filter-text">Filter by Team</h6>
+        </div>
+
+        <input type="text" placeholder="Search Team..." class="filter-item">
+            <h5 class="filter-text"></h5>
+        </input>
+    </div>
+</div>
 
 <div class="table-wrapper previous" ng-show="previous">
     <div class="table-row">
@@ -26,10 +61,10 @@
             <h5> {{match.date}}</h5>
         </div>
         <div class="table-item team">
-            <h5>{{match.homeTeam}} &nbsp;-&nbsp; {{match.homeTeamGoals}}</h5>
+            <h5>{{match.homeTeam}}&nbsp; :&nbsp;&nbsp; {{match.homeTeamGoals}}</h5>
         </div>
         <div class="table-item team">
-            <h5>{{match.awayTeam}} &nbsp;-&nbsp; {{match.awayTeamGoals}}</h5>
+            <h5>{{match.awayTeam}}&nbsp; :&nbsp;&nbsp; {{match.awayTeamGoals}}</h5>
         </div>
     </div>
 </div>
