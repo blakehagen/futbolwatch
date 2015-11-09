@@ -1,4 +1,4 @@
-angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idService, leagueService, upcomingMatchesService, previousMatchService) {
+angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idService, leagueService, upcomingMatchesService, previousMatchService, topScorerService) {
     
     // Get League ID from idService
     $scope.id = function () {
@@ -48,6 +48,16 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         $scope.toggleStandings = false;
         $scope.toggleNextMatches = false;
     };
+    
+        // Get Top Scorers
+        
+        $scope.getScorers = function(){
+            topScorerService.getTopScorers($scope.leagueData.topScorerId).then(function(response){
+                $scope.scorers = response;
+            })
+        }
+        
+        $scope.getScorers();
     
 
 
