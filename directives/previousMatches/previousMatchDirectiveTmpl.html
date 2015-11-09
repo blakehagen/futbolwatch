@@ -4,27 +4,8 @@
             <h6 class="filter-text center">Filter by Match Day:&nbsp;&nbsp;</h6>
         </div>
 
-        <select class="filter-item match-filter">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-            <option value="18">18</option>
-            <option value="19">19</option>
-            <option value="20">20</option>
+        <select class="filter-item match-filter" ng-model="matchDay" ng-options="option.matchDay as option.text for option in matchDayOptions">
+
         </select>
     </div>
     <div class="filter-sub-container align-left">
@@ -32,8 +13,7 @@
             <h6 class="filter-text center">Filter by Team:&nbsp;&nbsp;</h6>
         </div>
 
-        <input type="text" placeholder="Search Team..." class="filter-item">
-            <h5 class="filter-text"></h5>
+        <input type="text" placeholder="Search Team..." class="filter-item" ng-model="filterTeam">
         </input>
     </div>
 </div>
@@ -53,7 +33,7 @@
             <h5 class="center-strong">Away Team</h5>
         </div>
     </div>
-    <div class="table-row" ng-repeat="match in previous">
+    <div class="table-row" ng-repeat="match in previous | filter: {matchDay: matchDay} : true | filter : filterTeam">
         <div class="table-item matchDay">
             <h5>{{match.matchDay}}</h5>
         </div>

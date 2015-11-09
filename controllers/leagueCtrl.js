@@ -48,8 +48,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         $scope.toggleStandings = false;
         $scope.toggleNextMatches = false;
     };
-
-
+    
 
 
 });
