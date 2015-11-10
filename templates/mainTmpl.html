@@ -9,23 +9,23 @@
         <div class="tab">
             <h2>FIXTURES</h2>
         </div>
-
         <div class="tab">
             <h2>RESULTS</h2>
         </div>
-        <div class="tab">
+        <div class="tab" ng-click="getScorers()">
             <h2>TOP SCORERS</h2>
         </div>
         <div class="tab">
             <h2>INFO</h2>
         </div>
     </div>
-
     <div class="top">
         <h1> <a href="{{leagueData.previousTeam}}"><span><&nbsp;</span></a> {{leagueData.leagueHeader}} <a href="{{leagueData.nextTeam}}"><span>&nbsp;></span></a></h1>
     </div>
 
     <league-standings league="league" ng-show="toggleStandings"></league-standings>
+    
+    <top-scorers scorers="scorers" ng-show="toggleScorers"></top-scorers>
 
 
 

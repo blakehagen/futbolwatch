@@ -1,11 +1,11 @@
 <div class="top" ng-show="league">
-    <div class="row">
+    <div class="row league-row">
     </div>
-    <div class="row">
+    <div class="row league-row">
         <div class="row-item small">
         </div>
         <div class="row-item team-hdr">
-            <h3 class="header-text">Team</h3>
+            <h3 class="header-text">TEAM</h3>
         </div>
         <div class="row-item small">
             <h3 class="header-text">GP</h3>
@@ -20,13 +20,13 @@
             <h3 class="header-text">D</h3>
         </div>
         <div class="row-item small">
-            <h3 class="header-text">Pts</h3>
+            <h3 class="header-text">PTS</h3>
         </div>
     </div>
 </div>
 
 <div class="tbl-wrapper" ng-show="league">
-    <div class="row" ng-repeat="team in league">
+    <div class="row league-row" ng-repeat="team in league">
         <div class="row-item small row-text">
             <h3>{{team.position}}.</h3>
         </div>
