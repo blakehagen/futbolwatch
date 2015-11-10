@@ -1,148 +1,52 @@
-<div class="main-wrapper">
-    <div class="main-sidebar">
-        <div class="logo">
-            <img ng-src="{{leagueData.leagueLogoPath}}">
-        </div>
-        <div class="tab">
-            <h2>TABLE</h2>
-        </div>
-        <div class="tab" ng-click="getStandings()>
-            <h2>FIXTURES</h2>
-        </div>
-
-        <div class="tab">
-            <h2>RESULTS</h2>
-        </div>
-        <div class="tab">
-            <h2>TOP SCORES</h2>
-        </div>
-        <div class="tab">
-            <h2>INFO</h2>
-        </div>
+<div class="top" ng-show="league">
+    <div class="row">
     </div>
-
-    <div class="top">
-        <h1>{{leagueData.leagueHeader}}</h1>
-    </div>
-    <div class="top">
-        <div class="row">
-        </div>
-
-        <div class="row">
-            <div class="row-item small">
-            </div>
-            <div class="row-item team-hdr">
-                <h3 class="header-text">Team</h3>
-            </div>
-            <div class="row-item small">
-                <h3 class="header-text">GP</h3>
-            </div>
-            <div class="row-item small">
-                <h3 class="header-text">W</h3>
-            </div>
-            <div class="row-item small">
-                <h3 class="header-text">L</h3>
-            </div>
-            <div class="row-item small">
-                <h3 class="header-text">D</h3>
-            </div>
-            <div class="row-item small">
-                <h3 class="header-text">Pts</h3>
-            </div>
-        </div>
-    </div>
-
-    <div class="row" ng-repeat="team in league">
+    <div class="row">
         <div class="row-item small">
-            <h3>{{team.position}}.</h3>
         </div>
         <div class="row-item team-hdr">
+            <h3 class="header-text">Team</h3>
+        </div>
+        <div class="row-item small">
+            <h3 class="header-text">GP</h3>
+        </div>
+        <div class="row-item small">
+            <h3 class="header-text">W</h3>
+        </div>
+        <div class="row-item small">
+            <h3 class="header-text">L</h3>
+        </div>
+        <div class="row-item small">
+            <h3 class="header-text">D</h3>
+        </div>
+        <div class="row-item small">
+            <h3 class="header-text">Pts</h3>
+        </div>
+    </div>
+</div>
+
+<div class="tbl-wrapper" ng-show="league">
+    <div class="row" ng-repeat="team in league">
+        <div class="row-item small row-text">
+            <h3>{{team.position}}.</h3>
+        </div>
+        <div class="row-item team-hdr row-left">
             <h3>{{team.team}}</h3>
         </div>
-        <div class="row-item small">
+        <div class="row-item small row-text">
             <h3>{{team.gamesPlayed}}</h3>
         </div>
-        <div class="row-item small">
+        <div class="row-item small row-text">
             <h3>{{team.wins}}</h3>
         </div>
-        <div class="row-item small">
+        <div class="row-item small row-text">
             <h3>{{team.losses}}</h3>
         </div>
-        <div class="row-item small">
+        <div class="row-item small row-text">
             <h3>{{team.draws}}</h3>
         </div>
-        <div class="row-item small">
+        <div class="row-item small row-text">
             <h3>{{team.points}}</h3>
         </div>
     </div>
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<div class="table-wrapper" ng-show="league">
-
-    <div class="table-row">
-        <div class="table-item">
-            <h5></h5>
-        </div>
-        <div class="table-item big">
-            <h5 class="center-strong">{{league[0].league}}</h5>
-        </div>
-        <div class="table-item">
-            <h5 class="center-strong">GP</h5>
-        </div>
-        <div class="table-item">
-            <h5 class="center-strong">W</h5>
-        </div>
-        <div class="table-item">
-            <h5 class="center-strong">L</h5>
-        </div>
-        <div class="table-item">
-            <h5 class="center-strong">D</h5>
-        </div>
-        <div class="table-item">
-            <h5 class="center-strong">Pts</h5>
-        </div>
-    </div>
-
-    <div ng-repeat="team in league">
-        <div class="table-row">
-            <div class="table-item">
-                <h5>{{team.position}}.</h5>
-            </div>
-            <div class="table-item big">
-                <h5>{{team.team}}</h5>
-            </div>
-            <div class="table-item">
-                <h5>{{team.gamesPlayed}}</h5>
-            </div>
-            <div class="table-item">
-                <h5>{{team.wins}}</h5>
-            </div>
-            <div class="table-item">
-                <h5>{{team.losses}}</h5>
-            </div>
-            <div class="table-item">
-                <h5>{{team.draws}}</h5>
-            </div>
-            <div class="table-item">
-                <h5>{{team.points}}</h5>
-            </div>
-        </div>
-    </div>
-</div>-->

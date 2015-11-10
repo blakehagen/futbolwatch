@@ -3,7 +3,7 @@
         <div class="logo">
             <img ng-src="{{leagueData.leagueLogoPath}}">
         </div>
-        <div class="tab" ng-click="getStandings()">
+        <div class="tab">
             <h2>TABLE</h2>
         </div>
         <div class="tab">
@@ -22,58 +22,11 @@
     </div>
 
     <div class="top">
-        <h1>{{leagueData.leagueHeader}}</h1>
+        <h1> <span><&nbsp;</span> {{leagueData.leagueHeader}} <span>&nbsp;></span></h1>
     </div>
-    <div class="top">
-        <div class="row">
-        </div>
 
-        <div class="row">
-            <div class="row-item small">
-            </div>
-            <div class="row-item team-hdr">
-                <h3 class="header-text">Team</h3>
-            </div>
-            <div class="row-item small">
-                <h3 class="header-text">GP</h3>
-            </div>
-            <div class="row-item small">
-                <h3 class="header-text">W</h3>
-            </div>
-            <div class="row-item small">
-                <h3 class="header-text">L</h3>
-            </div>
-            <div class="row-item small">
-                <h3 class="header-text">D</h3>
-            </div>
-            <div class="row-item small">
-                <h3 class="header-text">Pts</h3>
-            </div>
-        </div>
-    </div>
-    <div class="tbl-wrapper">
-        <div class="row" ng-repeat="team in league">
-            <div class="row-item small row-text">
-                <h3>{{team.position}}.</h3>
-            </div>
-            <div class="row-item team-hdr row-left">
-                <h3>{{team.team}}</h3>
-            </div>
-            <div class="row-item small row-text">
-                <h3>{{team.gamesPlayed}}</h3>
-            </div>
-            <div class="row-item small row-text">
-                <h3>{{team.wins}}</h3>
-            </div>
-            <div class="row-item small row-text">
-                <h3>{{team.losses}}</h3>
-            </div>
-            <div class="row-item small row-text">
-                <h3>{{team.draws}}</h3>
-            </div>
-            <div class="row-item small row-text">
-                <h3>{{team.points}}</h3>
-            </div>
-        </div>
-    </div>
+    <league-standings league="league" ng-show="toggleStandings"></league-standings>
+
+
+
 </div>

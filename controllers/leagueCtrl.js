@@ -8,19 +8,20 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
     $scope.id();
     
     // Get League Standings
-    $scope.toggleStandings = false;
+    // $scope.toggleStandings = true;
 
     $scope.getStandings = function () {
-        if ($scope.toggleStandings === false) {
             leagueService.getLeagueData($scope.leagueData.leagueId).then(function (response) {
                 $scope.league = response;
             })
-        }
+        
         $scope.toggleStandings = !$scope.toggleStandings;
         $scope.toggleNextMatches = false;
         $scope.togglePreviousMatches = false;
         $scope.toggleScorers = false;
     };
+    
+    $scope.getStandings();
     
     // Get Upcoming Matches
     $scope.toggleNextMatches = false;
