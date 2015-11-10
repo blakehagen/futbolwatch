@@ -1,5 +1,5 @@
 angular.module('waterCoolerFC').service('previousMatchService', function ($http, $q) {
-    
+
     this.getPreviousMatches = function (leagueId) {
         var deferred = $q.defer();
         $http({
@@ -10,8 +10,14 @@ angular.module('waterCoolerFC').service('previousMatchService', function ($http,
             // console.log(response.data.fixtures);
             var previousFixtures = response.data.fixtures;
             var previous = [];
-            
-            for(var i = 0; i < previousFixtures.length; i++){
+
+            for (var i = 0; i < previousFixtures.length; i++) {
+                previousFixtures[i].homeTeamName = previousFixtures[i].homeTeamName.replace('FC', '');
+                previousFixtures[i].awayTeamName = previousFixtures[i].awayTeamName.replace('FC', '');
+                
+            }
+
+            for (var i = 0; i < previousFixtures.length; i++) {
                 previous.push({
                     date: moment(previousFixtures[i].date).format('ddd, MMM D, YYYY'),
                     matchDay: previousFixtures[i].matchday,

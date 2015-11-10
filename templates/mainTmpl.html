@@ -3,10 +3,10 @@
         <div class="logo">
             <img ng-src="{{leagueData.leagueLogoPath}}">
         </div>
-        <div class="tab">
+        <div class="tab" ng-click="getStandings();">
             <h2>TABLE</h2>
         </div>
-        <div class="tab">
+        <div class="tab" ng-click="getNextMatches()">
             <h2>FIXTURES</h2>
         </div>
         <div class="tab">
@@ -25,7 +25,11 @@
 
     <league-standings league="league" ng-show="toggleStandings"></league-standings>
     
+    <upcoming-matches next="next" ng-show="toggleNextMatches"></upcoming-matches>
+    
     <top-scorers scorers="scorers" ng-show="toggleScorers"></top-scorers>
+    
+    
 
 
 

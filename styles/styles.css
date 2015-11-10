@@ -11,9 +11,12 @@ a:visited {
     text-decoration: none;
 }
 
-html, body {
+body {
     width: 100%;
     height: 100%;
+    background: url('/assets/background.png');
+    background-size: cover;
+
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -25,19 +28,20 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
     font-size: 18px;
     letter-spacing: 1.8px;
-    color: #333;
+    color: #FFF;
     font-weight: 800;
     line-height: 67px;
     text-align: center;
 }
 
     h1 span {
-        font-weight: 200;
+        font-weight: 300;
+        color: #fff;
     }
 
 h2 {
     font-size: 16px;
-    color: #333;
+    color: #FFF;
     letter-spacing: 1.6px;
     font-weight: 400;
     line-height: 72px;
@@ -47,20 +51,20 @@ h2 {
 
 h3 {
     font-size: 14px;
-    color: #333;
+    color: #FFF;
     font-weight: 100;
 }
 
   h5 {
     font-size: 16px;
-    color: #333;
+    color: #FFF;
     font-weight: 100;
     margin: 5px 0;
 }
 
   h6 {
     font-size: 12px;
-    color: #333;
+    color: #FFF;
     font-weight: 100;
     margin: 5px 0;
 }
@@ -95,18 +99,28 @@ img {
 .logo {
     width: 100%;
     height: 134px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     text-align: center;
 }
 
 .tab {
     width: 100%;
     height: 72px;
-    border: 1px solid greenyellow;
+    cursor: pointer;
+    /*border: 1px solid greenyellow;*/
 }
 
 
 /* Content Views (for directives) */
+
+.odd {
+    /*background: #fff;*/
+    /*opacity: .2;*/
+}
+
+/*.even {
+    opacity: .6;
+}*/
 
 .tbl-wrapper {
     width: 410px;
@@ -116,10 +130,10 @@ img {
 }
 
 .row {
-    width: 410px;
+    width: 100%;
     height: 36px;
     padding-right: 7px;
-    /*border: 1px solid lightpink;*/
+    border: 1px solid lightpink;
     float: right;
 }
 
@@ -128,7 +142,7 @@ img {
 }
 
 .row-item {
-    /*border: 1px solid rebeccapurple;*/
+    border: 1px solid rebeccapurple;
     height: 33px;
     display: inline-block;
     width: 50px;
@@ -136,8 +150,9 @@ img {
 }
 
 .header-text {
-    padding-top: 6px;
+    padding-top: 12px;
     text-align: center;
+    font-size: 12px;
 }
 
 .row-text {
@@ -173,7 +188,23 @@ img {
     margin: 0;
 }
 
+.date-hdr-next {
+    width: 50px;
+    text-align: center;
+}
 
+.team-hdr-next {
+    width: 160px;
+    text-align: center;
+}
+
+.sm-next {
+    width: 14px;
+}
+
+.nxt-text {
+    line-height: 33px;
+}
 
 
 
@@ -279,10 +310,10 @@ header {
 }
 
 /* // // // Footer // // // */
-
+/*
 .page-wrap {
     min-height: 100%;
-    /* equal to footer height */
+    /* equal to footer height 
     margin-bottom: -40px; 
     border: 1px solid #fff;
 }
@@ -309,3 +340,5 @@ header {
         margin: 0;
         text-align: center;
     }
+    
+    */

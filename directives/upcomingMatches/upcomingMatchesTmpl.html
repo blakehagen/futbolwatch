@@ -1,21 +1,74 @@
-<div class="main-wrap" ng-show="next">
+<div class="top" ng-show="next">
+    <div class="row">
+    </div>
+    <div class="row">
+        <div class="row-item date-hdr-next">
+            <h3 class="header-text">DATE</h3>
+        </div>
+        <div class="row-item team-hdr-next">
+            <h3 class="header-text">HOME</h3>
+        </div>
+        <div class="row-item small sm-next">
+            <h3 class="header-text"></h3>
+        </div>
+        <div class="row-item team-hdr-next">
+            <h3 class="header-text">AWAY</h3>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="tbl-wrapper" ng-show="next">
+    <div class="row" ng-repeat="match in next">
+        <span ng-class-odd="'odd'" ng-class-even="'even'">
+        <div class="row-item date-hdr-next">
+                <h3 class="nxt-text">{{match.matchDate}}</h3>
+            </div>
+        <div class="row-item team-hdr-next">
+                <h3 class="nxt-text">{{match.homeTeam}}</h3>
+            </div>
+        <div class="row-item small sm-next">
+                <h3 class="nxt-text">v.</h3>
+            </div>
+    
+        <div class="row-item team-hdr-next">
+                <h3 class="nxt-text">{{match.awayTeam}}</h3>
+            </div>
+        </span>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="main-wrap" ng-show="next">
     <div class="table-wrapper matches">
         <div class="table-row">
             <div class="table-item date">
-                <h5 class="center-strong">Match Date<sup>*</sup></h5>
+                <h5 class="center-strong">Date<sup>*</sup></h5>
             </div>
             <div class="table-item team-header">
-                <h5 class="center-strong">Home Team</h5>
+                <h5 class="center-strong">Home</h5>
             </div>
             <div class="table-item">
                 <h5></h5>
             </div>
             <div class="table-item team-header">
-                <h5 class="center-strong">Away Team</h5>
+                <h5 class="center-strong">Away</h5>
             </div>
-        </div>
+        </div>-->
 
-        <div class="table-row" ng-repeat="match in next">
+<!--<div class="table-row" ng-repeat="match in next">
             <div class="table-item date">
                 <h5>{{match.matchDate}}</h5>
             </div>
@@ -32,5 +85,5 @@
     </div>
     <div class="time">
         <h6><sup>*&nbsp;</sup>Time shown is your local time</h6>
-    </div>
-</div>
+    </div>-->
+<!--</div>-->

@@ -24,25 +24,27 @@
 
 <div class="tbl-wrapper" ng-show="scorers">
     <div class="row" ng-repeat="player in scorers">
-        <div class="row-item sm-goals row-text">
-            <h3>{{player.rank}}.</h3>
-        </div>
-        <div class="row-item team-hdr row-left goals">
-            <h3>{{player.name}}</h3>
-        </div>
-        <div class="row-item team-hdr row-left goals">
-            <h3>{{player.team}}</h3>
-        </div>
-
-        <!--<div class="row-item small row-text">
-            <h3>{{player.matchesPlayed}}</h3>
-        </div>-->
-        <!--<div class="row-item small row-text">
-            <h3>{{player.penalties}}</h3>
-        </div>-->
-        <div class="row-item sm-goals no-margin row-text">
-            <h3>{{player.goals}}</h3>
-        </div>
+        <span ng-class-odd="'odd'" ng-class-even="'even'">
+            <div class="row-item sm-goals row-text">
+                <h3>{{player.rank}}.</h3>
+            </div>
+            <div class="row-item team-hdr row-left goals">
+                <h3>{{player.name}}</h3>
+            </div>
+            <div class="row-item team-hdr row-left goals">
+                <h3>{{player.team}}</h3>
+            </div>
+    
+            <!--<div class="row-item small row-text">
+                <h3>{{player.matchesPlayed}}</h3>
+            </div>-->
+            <!--<div class="row-item small row-text">
+                <h3>{{player.penalties}}</h3>
+            </div>-->
+            <div class="row-item sm-goals no-margin row-text">
+                <h3>{{player.goals}}</h3>
+            </div>
+        </span>
     </div>
 </div>
 
