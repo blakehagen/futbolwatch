@@ -110,6 +110,10 @@ img {
     /*border: 1px solid greenyellow;*/
 }
 
+.tab:hover {
+    background: #BD4545;
+}
+
 
 /* Content Views (for directives) */
 
@@ -133,7 +137,7 @@ img {
     width: 100%;
     height: 36px;
     padding-right: 7px;
-    border: 1px solid lightpink;
+    /*border: 1px solid lightpink;*/
     float: right;
 }
 
@@ -142,7 +146,7 @@ img {
 }
 
 .row-item {
-    border: 1px solid rebeccapurple;
+    /*border: 1px solid rebeccapurple;*/
     height: 33px;
     display: inline-block;
     width: 50px;
