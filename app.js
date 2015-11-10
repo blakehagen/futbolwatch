@@ -3,13 +3,13 @@ angular.module('waterCoolerFC', ['ui.router']).config(function ($stateProvider, 
     $stateProvider
         .state('home', {
             url: '/home',
-            templateUrl: 'templates/homeTmpl.html',
+            templateUrl: 'templates/mainTmpl.html',
             controller: 'leagueCtrl'
         })
 
         .state('league', {
             url: '/leagues/:league',
-            templateUrl: 'templates/leagueTemplate.html',
+            templateUrl: 'templates/mainTmpl.html',
             controller: 'leagueCtrl',
         })
 

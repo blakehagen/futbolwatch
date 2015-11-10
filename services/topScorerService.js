@@ -4,7 +4,9 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
         var deferred = $q.defer();
         $http({
             method: 'GET',
-            url: 'https://www.kimonolabs.com/api/' + id + '?apikey=Gw5PcHFe2RGyDfn2GJlUBynbruB41WWo'
+            url: 'https://www.kimonolabs.com/api/' + id + '?apikey=Gw5PcHFe2RGyDfn2GJlUBynbruB41WWo',
+            crossDomain: true,
+            headers: {}
         }).then(function (response) {
             var topScorersData = response.data.results.collection;
 

@@ -1,4 +1,100 @@
-<div class="table-wrapper" ng-show="league">
+<div class="main-wrapper">
+    <div class="main-sidebar">
+        <div class="logo">
+            <img ng-src="{{leagueData.leagueLogoPath}}">
+        </div>
+        <div class="tab">
+            <h2>TABLE</h2>
+        </div>
+        <div class="tab" ng-click="getStandings()>
+            <h2>FIXTURES</h2>
+        </div>
+
+        <div class="tab">
+            <h2>RESULTS</h2>
+        </div>
+        <div class="tab">
+            <h2>TOP SCORES</h2>
+        </div>
+        <div class="tab">
+            <h2>INFO</h2>
+        </div>
+    </div>
+
+    <div class="top">
+        <h1>{{leagueData.leagueHeader}}</h1>
+    </div>
+    <div class="top">
+        <div class="row">
+        </div>
+
+        <div class="row">
+            <div class="row-item small">
+            </div>
+            <div class="row-item team-hdr">
+                <h3 class="header-text">Team</h3>
+            </div>
+            <div class="row-item small">
+                <h3 class="header-text">GP</h3>
+            </div>
+            <div class="row-item small">
+                <h3 class="header-text">W</h3>
+            </div>
+            <div class="row-item small">
+                <h3 class="header-text">L</h3>
+            </div>
+            <div class="row-item small">
+                <h3 class="header-text">D</h3>
+            </div>
+            <div class="row-item small">
+                <h3 class="header-text">Pts</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" ng-repeat="team in league">
+        <div class="row-item small">
+            <h3>{{team.position}}.</h3>
+        </div>
+        <div class="row-item team-hdr">
+            <h3>{{team.team}}</h3>
+        </div>
+        <div class="row-item small">
+            <h3>{{team.gamesPlayed}}</h3>
+        </div>
+        <div class="row-item small">
+            <h3>{{team.wins}}</h3>
+        </div>
+        <div class="row-item small">
+            <h3>{{team.losses}}</h3>
+        </div>
+        <div class="row-item small">
+            <h3>{{team.draws}}</h3>
+        </div>
+        <div class="row-item small">
+            <h3>{{team.points}}</h3>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="table-wrapper" ng-show="league">
 
     <div class="table-row">
         <div class="table-item">
@@ -49,4 +145,4 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
