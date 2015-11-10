@@ -25,14 +25,43 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
             var topScorers = [];
 
             for (var i = 0; i < topScorersData.length; i++) {
-                topScorersData[i].team = topScorersData[i].team.replace('FC', '');
-
-                if (topScorersData[i].team === 'Futbol Club Barcelona') {
-                    topScorersData[i].team = 'Barcelona';
+                if (topScorersData[i].team === 'Rayo Vallecano de Madrid') {
+                    topScorersData[i].team = 'Rayo Vallecano';
+                }
+                if (topScorersData[i].team === 'Real Sociedad de Fútbol') {
+                    topScorersData[i].team = 'Real Sociedad';
+                }
+                if (topScorersData[i].team === 'RCD Espanyol') {
+                    topScorersData[i].team = 'Espanyol';
+                }
+                if (topScorersData[i].team === 'Olympique Lyonnais') {
+                    topScorersData[i].team = 'Olympique Lyon';
+                }
+                if (topScorersData[i].team === 'FC Girondins de Bordeaux') {
+                    topScorersData[i].team = 'Girondins Bordeaux';
+                }
+                if (topScorersData[i].team === 'Olympique de Marseille') {
+                    topScorersData[i].team = 'Olympique Marseille';
                 }
                 if (topScorersData[i].team === 'Borussia Mönchengladbach') {
                     topScorersData[i].team = 'B. Mönchengladbach';
                 }
+                if (topScorersData[i].team === 'Futbol Club Barcelona') {
+                    topScorersData[i].team = 'Barcelona';
+                }
+                topScorersData[i].team = topScorersData[i].team.replace('ACF', '');
+                topScorersData[i].team = topScorersData[i].team.replace('AFC', '');
+                topScorersData[i].team = topScorersData[i].team.replace('CFC', '');
+                topScorersData[i].team = topScorersData[i].team.replace('FC', '');
+                topScorersData[i].team = topScorersData[i].team.replace('CF', '');
+                topScorersData[i].team = topScorersData[i].team.replace('UD', '');
+                topScorersData[i].team = topScorersData[i].team.replace('RC', '');
+                topScorersData[i].team = topScorersData[i].team.replace('TSG', '');
+                topScorersData[i].team = topScorersData[i].team.replace('SSC', '');
+                topScorersData[i].team = topScorersData[i].team.replace('BSC', '');
+                topScorersData[i].team = topScorersData[i].team.replace('SCO', '');
+                topScorersData[i].team = topScorersData[i].team.replace('OSC', '');
+                topScorersData[i].team = topScorersData[i].team.replace('SC', '');
 
                 topScorers.push({
                     rank: topScorersData[i].rank,
