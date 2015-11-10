@@ -37,6 +37,12 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
                 if (topScorersData[i].team === 'Olympique Lyonnais') {
                     topScorersData[i].team = 'Olympique Lyon';
                 }
+                if (topScorersData[i].team === 'PSV') {
+                    topScorersData[i].team = 'PSV Eindhoven';
+                }
+                if (topScorersData[i].team === 'AZ') {
+                    topScorersData[i].team = 'AZ Alkmaar';
+                }
                 if (topScorersData[i].team === 'FC Girondins de Bordeaux') {
                     topScorersData[i].team = 'Girondins Bordeaux';
                 }

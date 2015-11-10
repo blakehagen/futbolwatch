@@ -206,6 +206,15 @@ img {
     line-height: 33px;
 }
 
+.results {
+    width: 40px;
+    text-align: center;
+}
+
+.team-hdr-results {
+    width: 160px;
+    text-align: center;
+}
 
 
 
