@@ -22,7 +22,7 @@
     </div>
 
     <div class="top">
-        <h1> <span><&nbsp;</span> {{leagueData.leagueHeader}} <span>&nbsp;></span></h1>
+        <h1> <a href="{{leagueData.previousTeam}}"><span><&nbsp;</span></a> {{leagueData.leagueHeader}} <a href="{{leagueData.nextTeam}}"><span>&nbsp;></span></a></h1>
     </div>
 
     <league-standings league="league" ng-show="toggleStandings"></league-standings>
