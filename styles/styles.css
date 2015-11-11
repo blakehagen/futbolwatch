@@ -262,11 +262,11 @@ img {
     float: left;
 }
 
-
 .filter-text {
     line-height: 22px;
     text-align: center;
     font-size: 9px;
+    font-weight: 100;
     color: #A3A3A3;
 }
 
@@ -277,10 +277,9 @@ img {
     background: #1F2A2D;
     margin-left: 2px;
     float: left;
-
     font-size: 9px;
-    color: #A3A3A3;
-    
+    font-weight: 100;
+    color: #A3A3A3;  
 }
 
 .team-filter {
@@ -290,6 +289,7 @@ img {
     background: #1F2A2D;
     margin-right: 28px;
     float: right;
-    font-size: 9px;
+    font-size: 8px;
+    font-weight: 100;
     color: #A3A3A3;
 }
