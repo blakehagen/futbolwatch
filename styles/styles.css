@@ -55,6 +55,10 @@ h3 {
     font-weight: 100;
 }
 
+.h3-date {
+    font-size: 10px;
+}
+
   h5 {
     font-size: 16px;
     color: #FFF;
@@ -149,7 +153,7 @@ img {
     width: 100%;
     height: 36px;
     padding-right: 7px;
-    /*border: 1px solid lightpink;*/
+    border: 1px solid lightpink;
     float: right;
 }
 
@@ -158,7 +162,7 @@ img {
 }
 
 .row-item {
-    /*border: 1px solid rebeccapurple;*/
+    border: 1px solid rebeccapurple;
     height: 33px;
     display: inline-block;
     width: 50px;
@@ -173,7 +177,7 @@ img {
 
 .row-text {
     text-align: center;
-    line-height: 33px
+    line-height: 34px
 }
 
 .row-left {
@@ -216,10 +220,11 @@ img {
 
 .sm-next {
     width: 14px;
+    text-align: center;
 }
 
 .nxt-text {
-    line-height: 33px;
+    line-height: 34px;
 }
 
 .results {

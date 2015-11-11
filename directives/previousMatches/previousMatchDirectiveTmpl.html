@@ -21,7 +21,7 @@
     <div class="row" ng-repeat="match in previous | filter: {matchDay: matchDay} : true | filter : filterTeam">
         <span ng-class-odd="'odd'" ng-class-even="'even'">
             <div class="row-item sm-goals">
-                 <h3 class="row-text">{{match.matchDay}}</h3>
+                 <h3 class="row-text h3-date">{{match.matchDay}}</h3>
              </div>
              <div class="row-item team-hdr-results">
                 <h3 class="nxt-text">{{match.homeTeam}}</h3>
