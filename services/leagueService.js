@@ -1,6 +1,9 @@
 angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
 
     this.getLeagueData = function (leagueId) {
+        if (leagueId === null) {
+            return false;
+        }
         var deferred = $q.defer();
         $http({
             method: 'GET',

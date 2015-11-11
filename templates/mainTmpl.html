@@ -15,9 +15,9 @@
         <div class="tab" ng-class="activeScorers ? 'activeTab' : 'notActiveTab'" ng-click="getScorers()">
             <h2>TOP SCORERS</h2>
         </div>
-        <div class="tab" ng-class="activeInfo ? 'activeTab' : 'notActiveTab'">
+        <a href="#/info"><div class="tab" ng-class="activeInfo ? 'activeTab' : 'notActiveTab'">
             <h2>INFO</h2>
-        </div>
+        </div></a>
     </div>
     <div class="top title">
         <h1> <a href="{{leagueData.previousTeam}}"><span><&nbsp;</span></a> {{leagueData.leagueHeader}} <a href="{{leagueData.nextTeam}}"><span>&nbsp;></span></a></h1>

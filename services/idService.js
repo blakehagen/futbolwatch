@@ -1,5 +1,4 @@
 angular.module('waterCoolerFC').service('idService', function ($stateParams) {
-
     this.getLeagueId = function () {
         if ($stateParams.league === 'epl') {
             return {
@@ -83,5 +82,4 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
             }
         }
     }
-
 });

@@ -124,7 +124,6 @@ img {
     height: 72px;
     cursor: pointer;
     /*border: 1px solid greenyellow;*/
-
 }
 
 .activeTab {
@@ -134,7 +133,6 @@ img {
 .notActiveTab {
     background: none;
 }
-
 
 /* Content Views (for directives) */
 
@@ -321,6 +319,4 @@ img {
     line-height: 40px;
     text-align: center;
     color: #A3A3A3;
-    
-    
 }
