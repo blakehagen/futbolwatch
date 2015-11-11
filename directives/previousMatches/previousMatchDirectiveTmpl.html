@@ -27,20 +27,18 @@
 </div>
 
 <div class="tbl-wrapper" ng-show="previous">
-    <div class="row" ng-repeat="match in previous | filter: {matchDay: matchDay} : true | filter : filterTeam">
-        <span ng-class-odd="'odd'" ng-class-even="'even'">
-            <div class="row-item sm-goals">
-                 <h3 class="row-text h3-date">{{match.matchDay}}</h3>
-             </div>
-             <div class="row-item team-hdr-results">
-                <h3 class="nxt-text">{{match.homeTeam}}</h3>
-            </div>
-            <div class="row-item small results">
-                <h3 class="nxt-text">{{match.homeTeamGoals}} : {{match.awayTeamGoals}}</h3>
-            </div>
-            <div class="row-item team-hdr-results">
-                <h3 class="nxt-text">{{match.awayTeam}}</h3>
-            </div>
-        </span>
+    <div class="row" ng-class-odd="'odd'" ng-repeat="match in previous | filter: {matchDay: matchDay} : true | filter : filterTeam">
+        <div class="row-item sm-goals">
+            <h3 class="row-text h3-date">{{match.matchDay}}</h3>
+        </div>
+        <div class="row-item team-hdr-results">
+            <h3 class="nxt-text">{{match.homeTeam}}</h3>
+        </div>
+        <div class="row-item small results">
+            <h3 class="nxt-text">{{match.homeTeamGoals}} : {{match.awayTeamGoals}}</h3>
+        </div>
+        <div class="row-item team-hdr-results">
+            <h3 class="nxt-text">{{match.awayTeam}}</h3>
+        </div>
     </div>
 </div>

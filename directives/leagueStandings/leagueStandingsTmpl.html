@@ -26,29 +26,28 @@
 </div>
 
 <div class="tbl-wrapper" ng-show="league">
-    <div class="row league-row" ng-repeat="team in league">
-        <span ng-class-odd="'odd'" ng-class-even="'even'">
-            <div class="row-item small row-text">
-                <h3>{{team.position}}.</h3>
-            </div>
-            <div class="row-item team-hdr row-left">
-                <h3>{{team.team}}</h3>
-            </div>
-            <div class="row-item small row-text">
-                <h3>{{team.gamesPlayed}}</h3>
-            </div>
-            <div class="row-item small row-text">
-                <h3>{{team.wins}}</h3>
-            </div>
-            <div class="row-item small row-text">
-                <h3>{{team.losses}}</h3>
-            </div>
-            <div class="row-item small row-text">
-                <h3>{{team.draws}}</h3>
-            </div>
-            <div class="row-item small row-text">
-                <h3>{{team.points}}</h3>
-            </div>
-      </span>
+    <div class="row league-row" ng-class-odd="'odd'" ng-repeat="team in league">
+
+        <div class="row-item small row-text">
+            <h3>{{team.position}}.</h3>
+        </div>
+        <div class="row-item team-hdr row-left">
+            <h3>{{team.team}}</h3>
+        </div>
+        <div class="row-item small row-text">
+            <h3>{{team.gamesPlayed}}</h3>
+        </div>
+        <div class="row-item small row-text">
+            <h3>{{team.wins}}</h3>
+        </div>
+        <div class="row-item small row-text">
+            <h3>{{team.losses}}</h3>
+        </div>
+        <div class="row-item small row-text">
+            <h3>{{team.draws}}</h3>
+        </div>
+        <div class="row-item small row-text">
+            <h3>{{team.points}}</h3>
+        </div>
     </div>
 </div>

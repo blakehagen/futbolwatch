@@ -132,13 +132,8 @@ img {
 /* Content Views (for directives) */
 
 .odd {
-    /*background: #fff;*/
-    /*opacity: .2;*/
+    background: #202C2E;
 }
-
-/*.even {
-    opacity: .6;
-}*/
 
 .tbl-wrapper {
     width: 410px;
