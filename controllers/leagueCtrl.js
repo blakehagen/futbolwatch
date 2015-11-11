@@ -95,10 +95,4 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         $scope.activeInfo = false;
     };
 
-
-
-
-
-
-
 });

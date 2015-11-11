@@ -1,12 +1,6 @@
 angular.module('waterCoolerFC', ['ui.router']).config(function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider
-        // .state('home', {
-        //     url: '/home',
-        //     templateUrl: 'templates/mainTmpl.html',
-        //     controller: 'leagueCtrl'
-        // })
-
         .state('league', {
             url: '/leagues/:league',
             templateUrl: 'templates/mainTmpl.html',
