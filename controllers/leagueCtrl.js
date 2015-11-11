@@ -7,6 +7,13 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
 
     $scope.id();
     
+    // Set ng-class to highlight the current active tab view
+    $scope.activeTable = true;
+    $scope.activeFixtures = false;
+    $scope.activeResults = false;
+    $scope.activeScorers = false;
+    $scope.activeInfo = false;
+    
     // Get League Standings
 
     $scope.getStandings = function () {
@@ -20,7 +27,8 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         $scope.toggleScorers = false;
     };
 
-    $scope.getStandings();
+    $scope.getStandings(); // ---> default to show Standings on Load
+    
     
     // Get Upcoming Matches
     $scope.toggleNextMatches = false;
@@ -33,6 +41,14 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         $scope.toggleStandings = false;
         $scope.togglePreviousMatches = false;
         $scope.toggleScorers = false;
+
+        $scope.activeTable = false;
+        $scope.activeFixtures = true;
+        $scope.activeResults = false;
+        $scope.activeScorers = false;
+        $scope.activeInfo = false;
+
+
     };
     
     // Get Previous Matches
@@ -46,6 +62,12 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         $scope.toggleScorers = false;
         $scope.toggleStandings = false;
         $scope.toggleNextMatches = false;
+
+        $scope.activeTable = false;
+        $scope.activeFixtures = false;
+        $scope.activeResults = true;
+        $scope.activeScorers = false;
+        $scope.activeInfo = false;
     };
     
     // Get Top Scorers
@@ -59,5 +81,18 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         $scope.togglePreviousMatches = false;
         $scope.toggleStandings = false;
         $scope.toggleNextMatches = false;
+
+        $scope.activeTable = false;
+        $scope.activeFixtures = false;
+        $scope.activeResults = false;
+        $scope.activeScorers = true;
+        $scope.activeInfo = false;
     };
+
+
+
+
+
+
+
 });

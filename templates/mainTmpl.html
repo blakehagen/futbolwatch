@@ -3,19 +3,19 @@
         <div class="logo">
             <img ng-src="{{leagueData.leagueLogoPath}}">
         </div>
-        <div class="tab" ng-click="getStandings();">
+        <div class="tab" ng-class="activeTable ? 'activeTab' : 'notActiveTab'" ng-click="getStandings()">
             <h2>TABLE</h2>
         </div>
-        <div class="tab" ng-click="getNextMatches()">
+        <div class="tab" ng-class="activeFixtures ? 'activeTab' : 'notActiveTab'" ng-click="getNextMatches()">
             <h2>FIXTURES</h2>
         </div>
-        <div class="tab" ng-click="getPreviousMatches()">
+        <div class="tab" ng-class="activeResults ? 'activeTab' : 'notActiveTab'"  ng-click="getPreviousMatches()">
             <h2>RESULTS</h2>
         </div>
-        <div class="tab" ng-click="getScorers()">
+        <div class="tab" ng-class="activeScorers ? 'activeTab' : 'notActiveTab'" ng-click="getScorers()">
             <h2>TOP SCORERS</h2>
         </div>
-        <div class="tab">
+        <div class="tab" ng-class="activeInfo ? 'activeTab' : 'notActiveTab'" >
             <h2>INFO</h2>
         </div>
     </div>

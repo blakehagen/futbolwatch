@@ -114,6 +114,14 @@ img {
     background: #BD4545;
 }
 
+.activeTab {
+    background: #BD4545;
+}
+
+.notActiveTab {
+    background: none;
+}
+
 
 /* Content Views (for directives) */
 
