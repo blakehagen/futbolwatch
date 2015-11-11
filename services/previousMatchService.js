@@ -30,6 +30,15 @@ angular.module('waterCoolerFC').service('previousMatchService', function ($http,
                 if (previousFixtures[i].homeTeamName === 'Olympique de Marseille') {
                     previousFixtures[i].homeTeamName = 'Olympique Marseille';
                 }
+                if (previousFixtures[i].homeTeamName === 'Club Atlético de Madrid') {
+                    previousFixtures[i].homeTeamName = 'Atlético Madrid';
+                }
+                if (previousFixtures[i].homeTeamName === 'RC Deportivo La Coruna') {
+                    previousFixtures[i].homeTeamName = 'La Coruña';
+                }
+                if (previousFixtures[i].homeTeamName === 'Bor. Mönchengladbach') {
+                    previousFixtures[i].homeTeamName = 'M.Gladbach';
+                }
                 previousFixtures[i].homeTeamName = previousFixtures[i].homeTeamName.replace('ACF', '');
                 previousFixtures[i].homeTeamName = previousFixtures[i].homeTeamName.replace('AFC', '');
                 previousFixtures[i].homeTeamName = previousFixtures[i].homeTeamName.replace('CFC', '');
@@ -64,6 +73,15 @@ angular.module('waterCoolerFC').service('previousMatchService', function ($http,
                 if (previousFixtures[i].awayTeamName === 'Olympique de Marseille') {
                     previousFixtures[i].awayTeamName = 'Olympique Marseille';
                 }
+                if (previousFixtures[i].awayTeamName === 'Club Atlético de Madrid') {
+                    previousFixtures[i].awayTeamName = 'Atlético Madrid';
+                }
+                if (previousFixtures[i].awayTeamName === 'RC Deportivo La Coruna') {
+                    previousFixtures[i].awayTeamName = 'La Coruña';
+                }
+                if (previousFixtures[i].awayTeamName === 'Bor. Mönchengladbach') {
+                    previousFixtures[i].awayTeamName = 'M.Gladbach';
+                }
                 previousFixtures[i].awayTeamName = previousFixtures[i].awayTeamName.replace('ACF', '');
                 previousFixtures[i].awayTeamName = previousFixtures[i].awayTeamName.replace('AFC', '');
                 previousFixtures[i].awayTeamName = previousFixtures[i].awayTeamName.replace('CFC', '');
@@ -83,9 +101,9 @@ angular.module('waterCoolerFC').service('previousMatchService', function ($http,
                 previous.push({
                     date: moment(previousFixtures[i].date).format('ddd, MMM D, YYYY'),
                     matchDay: previousFixtures[i].matchday,
-                    homeTeam: previousFixtures[i].homeTeamName,
+                    homeTeam: previousFixtures[i].homeTeamName.toUpperCase(),
                     homeTeamGoals: previousFixtures[i].result.goalsHomeTeam,
-                    awayTeam: previousFixtures[i].awayTeamName,
+                    awayTeam: previousFixtures[i].awayTeamName.toUpperCase(),
                     awayTeamGoals: previousFixtures[i].result.goalsAwayTeam
                 })
             }

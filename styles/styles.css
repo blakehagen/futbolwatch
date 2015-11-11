@@ -110,10 +110,6 @@ img {
     /*border: 1px solid greenyellow;*/
 }
 
-.tab:hover {
-    background: #BD4545;
-}
-
 .activeTab {
     background: #BD4545;
 }

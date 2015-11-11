@@ -30,6 +30,15 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
                 if (leagueData[i].teamName === 'Olympique de Marseille') {
                     leagueData[i].teamName = 'Olympique Marseille';
                 }
+                if (leagueData[i].teamName === 'Club Atlético de Madrid') {
+                    leagueData[i].teamName = 'Atlético Madrid';
+                }
+                if (leagueData[i].teamName === 'RC Deportivo La Coruna') {
+                    leagueData[i].teamName = 'La Coruña';
+                }
+                if (leagueData[i].teamName === 'Bor. Mönchengladbach') {
+                    leagueData[i].teamName = 'M.Gladbach';
+                }
                 leagueData[i].teamName = leagueData[i].teamName.replace('ACF', '');
                 leagueData[i].teamName = leagueData[i].teamName.replace('AFC', '');
                 leagueData[i].teamName = leagueData[i].teamName.replace('CFC', '');
@@ -49,7 +58,7 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
             for (var i = 0; i < leagueData.length; i++) {
                 leagueStandings.push({
                     league: response.data.leagueCaption,
-                    team: leagueData[i].teamName,
+                    team: leagueData[i].teamName.toUpperCase(),
                     position: leagueData[i].position,
                     points: leagueData[i].points,
                     wins: leagueData[i].wins,

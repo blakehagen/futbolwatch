@@ -30,6 +30,16 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
                 if (upcomingFixtures[i].homeTeamName === 'Olympique de Marseille') {
                     upcomingFixtures[i].homeTeamName = 'Olympique Marseille';
                 }
+                if (upcomingFixtures[i].homeTeamName === 'Club Atlético de Madrid') {
+                    upcomingFixtures[i].homeTeamName = 'Atlético Madrid';
+                }
+                if (upcomingFixtures[i].homeTeamName === 'RC Deportivo La Coruna') {
+                    upcomingFixtures[i].homeTeamName = 'La Coruña';
+                }
+                if (upcomingFixtures[i].homeTeamName === 'Bor. Mönchengladbach') {
+                    upcomingFixtures[i].homeTeamName = 'M.Gladbach';
+                }
+
                 upcomingFixtures[i].homeTeamName = upcomingFixtures[i].homeTeamName.replace('ACF', '');
                 upcomingFixtures[i].homeTeamName = upcomingFixtures[i].homeTeamName.replace('AFC', '');
                 upcomingFixtures[i].homeTeamName = upcomingFixtures[i].homeTeamName.replace('CFC', '');
@@ -44,8 +54,8 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
                 upcomingFixtures[i].homeTeamName = upcomingFixtures[i].homeTeamName.replace('OSC', '');
                 upcomingFixtures[i].homeTeamName = upcomingFixtures[i].homeTeamName.replace('SC', '');
             }
-            
-             for (var i = 0; i < upcomingFixtures.length; i++) {
+
+            for (var i = 0; i < upcomingFixtures.length; i++) {
                 if (upcomingFixtures[i].awayTeamName === 'Rayo Vallecano de Madrid') {
                     upcomingFixtures[i].awayTeamName = 'Rayo Vallecano';
                 }
@@ -63,6 +73,15 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
                 }
                 if (upcomingFixtures[i].awayTeamName === 'Olympique de Marseille') {
                     upcomingFixtures[i].awayTeamName = 'Olympique Marseille';
+                }
+                if (upcomingFixtures[i].awayTeamName === 'Club Atlético de Madrid') {
+                    upcomingFixtures[i].awayTeamName = 'Atlético Madrid';
+                }
+                if (upcomingFixtures[i].awayTeamName === 'RC Deportivo La Coruna') {
+                    upcomingFixtures[i].awayTeamName = 'La Coruña';
+                }
+                if (upcomingFixtures[i].awayTeamName === 'Bor. Mönchengladbach') {
+                    upcomingFixtures[i].awayTeamName = 'M.Gladbach';
                 }
                 upcomingFixtures[i].awayTeamName = upcomingFixtures[i].awayTeamName.replace('ACF', '');
                 upcomingFixtures[i].awayTeamName = upcomingFixtures[i].awayTeamName.replace('AFC', '');
@@ -82,8 +101,8 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
             for (var i = 0; i < upcomingFixtures.length; i++) {
                 upcoming.push({
                     matchDate: moment(upcomingFixtures[i].date).format('MM/DD'),
-                    homeTeam: upcomingFixtures[i].homeTeamName,
-                    awayTeam: upcomingFixtures[i].awayTeamName
+                    homeTeam: upcomingFixtures[i].homeTeamName.toUpperCase(),
+                    awayTeam: upcomingFixtures[i].awayTeamName.toUpperCase()
                 })
             }
             deferred.resolve(upcoming)

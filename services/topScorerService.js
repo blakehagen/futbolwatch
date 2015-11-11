@@ -10,15 +10,20 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
         }).then(function (response) {
             var topScorersData = response.data.results.collection;
 
-            // Format Names to not be all UPPERCase --> to be used in pushing info in final array
+            // Format Names to not be just initial of first name
             var formatName = function (str) {
                 var formatted;
-                var arr = str.toLowerCase().split(' ');
-                var caps = [];
+                var arr = str.split(' ');
+                var scorers = [];
                 for (var i = 0; i < arr.length; i++) {
-                    caps.push(arr[i].charAt(0).toUpperCase() + arr[i].slice(1));
+                    if (arr.length > 1) {
+                        scorers.push(arr[i].charAt(0).toUpperCase() + '. ' + arr[i + 1]);
+                        break;
+                    } else {
+                        scorers.push(arr[i]);
+                    }
                 }
-                formatted = caps.join(' ');
+                formatted = scorers.join(' ');
                 return formatted;
             }
 
@@ -50,10 +55,13 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
                     topScorersData[i].team = 'Olympique Marseille';
                 }
                 if (topScorersData[i].team === 'Borussia Mönchengladbach') {
-                    topScorersData[i].team = 'B. Mönchengladbach';
+                    topScorersData[i].team = 'M.Gladbach';
                 }
                 if (topScorersData[i].team === 'Futbol Club Barcelona') {
                     topScorersData[i].team = 'Barcelona';
+                }
+                if (topScorersData[i].team === 'Deportivo La Coruña') {
+                    topScorersData[i].team = 'La Coruña';
                 }
                 topScorersData[i].team = topScorersData[i].team.replace('ACF', '');
                 topScorersData[i].team = topScorersData[i].team.replace('AFC', '');
@@ -71,8 +79,8 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
 
                 topScorers.push({
                     rank: topScorersData[i].rank,
-                    name: formatName(topScorersData[i].name),
-                    team: topScorersData[i].team,
+                    name: formatName(topScorersData[i].name).toUpperCase(),
+                    team: topScorersData[i].team.toUpperCase(),
                     goals: topScorersData[i].goals,
                     penalties: topScorersData[i].penalties,
                     matches: topScorersData[i].matchesPlayed
