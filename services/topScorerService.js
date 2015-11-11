@@ -16,8 +16,11 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
                 var arr = str.split(' ');
                 var scorers = [];
                 for (var i = 0; i < arr.length; i++) {
-                    if (arr.length > 1) {
+                    if (arr.length === 2) {
                         scorers.push(arr[i].charAt(0).toUpperCase() + '. ' + arr[i + 1]);
+                        break;
+                    } else if (arr.length === 3) {
+                        scorers.push(arr[i].charAt(0).toUpperCase() + '. ' + arr[i + 1] + ' ' + arr[i + 2]);
                         break;
                     } else {
                         scorers.push(arr[i]);
@@ -90,7 +93,7 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
                     matches: topScorersData[i].matchesPlayed
                 })
             }
-            console.log(topScorers);
+            // console.log(topScorers);
             deferred.resolve(topScorers)
         })
         return deferred.promise
