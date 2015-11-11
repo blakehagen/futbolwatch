@@ -1,5 +1,7 @@
 <div class="top" ng-show="next">
     <div class="row">
+        <input type="text" placeholder="Search Team" class="filter team-filter" ng-model="filterTeam">
+        </input>
     </div>
     <div class="row">
         <div class="row-item date-hdr-next">
@@ -20,7 +22,7 @@
 
 
 <div class="tbl-wrapper" ng-show="next">
-    <div class="row" ng-repeat="match in next">
+    <div class="row" ng-repeat="match in next | filter : filterTeam">
         <span ng-class-odd="'odd'" ng-class-even="'even'">
         <div class="row-item date-hdr-next">
                 <h3 class="nxt-text h3-date">{{match.matchDate}}</h3>
