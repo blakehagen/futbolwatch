@@ -24,7 +24,7 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
         } else if ($stateParams.league === 'bundesliga') {
             return {
                 leagueId: 394,
-                leagueLogoPath: 'assets/bundesliga.png',
+                leagueLogoPath: 'assets/bundesliga-vector-logo.png',
                 flagPath: 'assets/germany.png',
                 leagueHeader: "GERMAN BUNDESLIGA",
                 topScorerId: '3vb8ywkg',

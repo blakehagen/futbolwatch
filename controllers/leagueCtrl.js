@@ -25,6 +25,12 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         $scope.toggleNextMatches = false;
         $scope.togglePreviousMatches = false;
         $scope.toggleScorers = false;
+
+        $scope.activeTable = true;
+        $scope.activeFixtures = false;
+        $scope.activeResults = false;
+        $scope.activeScorers = false;
+        $scope.activeInfo = false;
     };
 
     $scope.getStandings(); // ---> default to show Standings on Load
