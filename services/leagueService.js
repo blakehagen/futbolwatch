@@ -39,6 +39,19 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
                 if (leagueData[i].teamName === 'Bor. Mönchengladbach') {
                     leagueData[i].teamName = 'M.Gladbach';
                 }
+                if (leagueData[i].teamName === 'FC Internazionale Milano') {
+                    leagueData[i].teamName = 'Inter Milano';
+                }
+                if (leagueData[i].teamName === 'Académica de Coimbra') {
+                    leagueData[i].teamName = 'Académica Coimbra';
+                }
+                if (leagueData[i].teamName === 'West Bromwich Albion FC') {
+                    leagueData[i].teamName = 'West Brom';
+                }
+                if (leagueData[i].teamName === 'Tottenham Hotspur FC') {
+                    leagueData[i].teamName = 'Tottenham';
+                }
+
                 leagueData[i].teamName = leagueData[i].teamName.replace('ACF', '');
                 leagueData[i].teamName = leagueData[i].teamName.replace('AFC', '');
                 leagueData[i].teamName = leagueData[i].teamName.replace('CFC', '');

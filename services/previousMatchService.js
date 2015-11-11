@@ -39,6 +39,25 @@ angular.module('waterCoolerFC').service('previousMatchService', function ($http,
                 if (previousFixtures[i].homeTeamName === 'Bor. Mönchengladbach') {
                     previousFixtures[i].homeTeamName = 'M.Gladbach';
                 }
+                if (previousFixtures[i].homeTeamName === 'Feyenoord Rotterdam') {
+                    previousFixtures[i].homeTeamName = 'F. Rotterdam';
+                }
+                if (previousFixtures[i].homeTeamName === 'SC Cambuur-Leeuwarden') {
+                    previousFixtures[i].homeTeamName = 'C.Leeuwarden';
+                }
+                if (previousFixtures[i].homeTeamName === 'FC Internazionale Milano') {
+                    previousFixtures[i].homeTeamName = 'Inter Milano';
+                }
+                if (previousFixtures[i].homeTeamName === 'Académica de Coimbra') {
+                    previousFixtures[i].homeTeamName = 'Académica Coimbra';
+                }
+                if (previousFixtures[i].homeTeamName === 'West Bromwich Albion FC') {
+                    previousFixtures[i].homeTeamName = 'West Brom';
+                }
+                if (previousFixtures[i].homeTeamName === 'Tottenham Hotspur FC') {
+                    previousFixtures[i].homeTeamName = 'Tottenham';
+                }
+
                 previousFixtures[i].homeTeamName = previousFixtures[i].homeTeamName.replace('ACF', '');
                 previousFixtures[i].homeTeamName = previousFixtures[i].homeTeamName.replace('AFC', '');
                 previousFixtures[i].homeTeamName = previousFixtures[i].homeTeamName.replace('CFC', '');
@@ -81,6 +100,24 @@ angular.module('waterCoolerFC').service('previousMatchService', function ($http,
                 }
                 if (previousFixtures[i].awayTeamName === 'Bor. Mönchengladbach') {
                     previousFixtures[i].awayTeamName = 'M.Gladbach';
+                }
+                if (previousFixtures[i].awayTeamName === 'Feyenoord Rotterdam') {
+                    previousFixtures[i].awayTeamName = 'F. Rotterdam';
+                }
+                if (previousFixtures[i].awayTeamName === 'SC Cambuur-Leeuwarden') {
+                    previousFixtures[i].awayTeamName = 'C.Leeuwarden';
+                }
+                if (previousFixtures[i].awayTeamName === 'FC Internazionale Milano') {
+                    previousFixtures[i].awayTeamName = 'Inter Milano';
+                }
+                if (previousFixtures[i].awayTeamName === 'Académica de Coimbra') {
+                    previousFixtures[i].awayTeamName = 'Académica Coimbra';
+                }
+                if (previousFixtures[i].awayTeamName === 'West Bromwich Albion FC') {
+                    previousFixtures[i].awayTeamName = 'West Brom';
+                }
+                if (previousFixtures[i].awayTeamName === 'Tottenham Hotspur FC') {
+                    previousFixtures[i].awayTeamName = 'Tottenham';
                 }
                 previousFixtures[i].awayTeamName = previousFixtures[i].awayTeamName.replace('ACF', '');
                 previousFixtures[i].awayTeamName = previousFixtures[i].awayTeamName.replace('AFC', '');

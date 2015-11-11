@@ -63,6 +63,10 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
                 if (topScorersData[i].team === 'Deportivo La Coruña') {
                     topScorersData[i].team = 'La Coruña';
                 }
+                if (topScorersData[i].team === 'Tottenham Hotspur') {
+                    topScorersData[i].team = 'Tottenham';
+                }
+
                 topScorersData[i].team = topScorersData[i].team.replace('ACF', '');
                 topScorersData[i].team = topScorersData[i].team.replace('AFC', '');
                 topScorersData[i].team = topScorersData[i].team.replace('CFC', '');
