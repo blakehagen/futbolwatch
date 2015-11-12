@@ -162,8 +162,103 @@
         width: 5%;
         margin-left: 2px;
     }
+}
+
+@media (max-width: 400px){
     
+    h1 {
+        font-size: 14px;
+    }
     
+    h3 {
+        font-size: 9px;
+    }
     
+    .main-wrapper {
+        width: 95%;
+    }
+        
+    .top {
+        width: 100%;
+    }
     
+    .tbl-wrapper {
+        width: 100%;
+    }
+    
+    .header-text {
+        padding-top: 12px;
+        font-size: 9px;
+    }
+    
+    .row {
+        padding-right: 2px;
+    }
+    
+    .row-left {
+        line-height: 36px;
+        padding-left: 3px;  
+    }
+    
+    .team-hdr {
+        width: 45%;
+    }
+    
+    .team-hdr-next {
+        width: 37%;
+    }
+    
+    .nxt-text {
+        padding-left: 1px;
+    }
+    
+    .team-hdr-results {
+        width: 40%;
+    }
+    
+    .small {
+        width: 7%;
+    }
+    
+    .date-hdr-next {
+        width: 9%;
+    }
+    
+    .h3-date {
+        font-size: 9px;
+    }
+    
+    .team-hdr-results {
+        width: 41%
+    }
+    
+    .sm-goals {
+        width: 5%;
+        margin-left: 2px;
+    }
+    
+    .sm-menu-btn {
+        width: 50px;
+        margin: 0 2px;
+    }
+    
+    .sm-menu-btn-text {
+        line-height: 23px;
+        margin: 0;
+        font-size: 7px;
+    }
+    
+    .filter {
+        width: 75px;
+    }
+    
+    .filter-text {
+        font-size: 8px;
+    }
+    
+    .match-day-filter {
+        width: 40px;
+        float: left;
+        font-size: 8px;
+    }
 }
