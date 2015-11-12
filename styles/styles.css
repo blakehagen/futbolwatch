@@ -115,8 +115,12 @@ img {
 .img-container {
       display: none;
 }
+.responsive-menu {
+    display: none;
+}
 
-/*   -- -- -- -- -- -- -- -- -- */
+
+/* -- -- -- -- -- -- -- -- -- */
 
 .title {
     background: #1F2A2D;
@@ -128,8 +132,6 @@ img {
     /*border: 1px solid red;*/
     text-align: center;
 }
-
-
 
 .tab {
     width: 100%;

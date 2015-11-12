@@ -139,5 +139,10 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         $scope.activeScorers = false;
         $scope.activeInfo = true;
     };
-
+    
+    // Toggle Small Menu //
+    $scope.smallMenu = false;
+    $scope.toggleSmallMenu = function () {
+        $scope.smallMenu = !$scope.smallMenu;
+    }
 });

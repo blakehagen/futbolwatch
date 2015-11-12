@@ -1,4 +1,4 @@
-<div class="main-wrapper">
+<div class="main-wrapper" ng-class="smallMenu ? 'mainExtend' : 'mainNormal'">
     <div class="main-sidebar">
         <div class="logo">
             <img ng-src="{{leagueData.leagueLogoPath}}">
@@ -24,16 +24,31 @@
     <div class="top title">
         <h1><a href="{{leagueData.previousTeam}}"><span><&nbsp;</span></a> {{leagueData.leagueHeader}} <a href="{{leagueData.nextTeam}}"><span>&nbsp;></span></a></h1>
     </div>
-
+    <!-- This is for when the screen is smaller -->
     <div class="top top-responsive">
         <div class="img-container left">
             <img ng-src="{{leagueData.leagueLogoPath}}">
         </div>
         <div class="img-container">
-            <i class="fa fa-bars fa-2x menu"></i>
+            <i class="fa fa-bars fa-2x menu" ng-click="toggleSmallMenu()"></i>
         </div>
         <div class="img-container page-id">
             <h6>WaterCooler FC &nbsp;|&nbsp; Top Football League Info</h6>
+        </div>
+    </div>
+    <!-- Small Menu when clicked -->
+    <div class="top responsive-menu" ng-show="smallMenu">
+        <div class="sm-menu-btn">
+            <h6 class="sm-menu-btn-text">TABLE</h6>
+        </div>
+        <div class="sm-menu-btn">
+            <h6 class="sm-menu-btn-text">FIXTURES</h6>
+        </div>
+        <div class="sm-menu-btn">
+            <h6 class="sm-menu-btn-text">RESULTS</h6>
+        </div>
+        <div class="sm-menu-btn">
+            <h6 class="sm-menu-btn-text">SCORERS</h6>
         </div>
     </div>
 
