@@ -162,6 +162,7 @@
         width: 5%;
         margin-left: 2px;
     }
+   
 }
 
 @media (max-width: 400px){
@@ -174,30 +175,9 @@
         font-size: 9px;
     }
     
-    .main-wrapper {
-        width: 95%;
-    }
-        
-    .top {
-        width: 100%;
-    }
-    
-    .tbl-wrapper {
-        width: 100%;
-    }
-    
-    .header-text {
-        padding-top: 12px;
-        font-size: 9px;
-    }
-    
-    .row {
-        padding-right: 2px;
-    }
-    
     .row-left {
         line-height: 36px;
-        padding-left: 3px;  
+        padding-left: 2px;  
     }
     
     .team-hdr {
@@ -206,35 +186,6 @@
     
     .team-hdr-next {
         width: 37%;
-    }
-    
-    .nxt-text {
-        padding-left: 1px;
-    }
-    
-    .team-hdr-results {
-        width: 40%;
-    }
-    
-    .small {
-        width: 7%;
-    }
-    
-    .date-hdr-next {
-        width: 9%;
-    }
-    
-    .h3-date {
-        font-size: 9px;
-    }
-    
-    .team-hdr-results {
-        width: 41%
-    }
-    
-    .sm-goals {
-        width: 5%;
-        margin-left: 2px;
     }
     
     .sm-menu-btn {
@@ -261,4 +212,18 @@
         float: left;
         font-size: 8px;
     }
+    
+    .goals {
+        width: 40%px;
+    }
+    
+    .goals-name {
+        width: 35%px;
+    }
+    
+    .team-hdr-gls {
+        width: 38%;
+    }
+    
+    
 }
