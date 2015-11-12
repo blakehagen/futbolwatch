@@ -5,8 +5,7 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
         $http({
             method: 'GET',
             url: 'https://www.kimonolabs.com/api/' + id + '?apikey=Gw5PcHFe2RGyDfn2GJlUBynbruB41WWo',
-            crossDomain: true,
-            headers: {}
+            headers: {'Allow-Control-Allow-Origin': '*'}
         }).then(function (response) {
             var topScorersData = response.data.results.collection;
 
