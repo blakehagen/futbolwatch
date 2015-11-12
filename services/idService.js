@@ -43,7 +43,7 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
         } else if ($stateParams.league === 'serie-a') {
             return {
                 leagueId: 401,
-                leagueLogoPath: 'assets/optimized/serieA-compressor.png',
+                leagueLogoPath: 'assets/optimized/serie-a.png',
                 flagPath: 'assets/italy.png',
                 leagueHeader: "ITALY SERIE A",
                 topScorerId: 'dp2cqh4g',
@@ -53,7 +53,7 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
         } else if ($stateParams.league === 'portugal-primeira') {
             return {
                 leagueId: 402,
-                leagueLogoPath: 'assets/optimized/portugalprimeira-compressor.png',
+                leagueLogoPath: 'assets/optimized/portugal-compressor.png',
                 flagPath: 'assets/portugal.png',
                 leagueHeader: "PORTUGAL PRIMEIRA",
                 topScorerId: 'adx5ccsw',
