@@ -100,6 +100,7 @@ img {
     border-right: 10px solid #455859;
     float: left;
     background: #202C2E;
+    /*opacity: .8;*/
 }
 
 .top {
@@ -107,7 +108,9 @@ img {
     height: 67px;
     /*border: 1px solid mediumseagreen;*/
     float: right;
+        /*opacity: .8;*/
 }
+
 /* ONLY SHOW ON SMALLER SCREENS */
 .top-responsive {
     display: none;
@@ -132,6 +135,7 @@ img {
     height: 134px;
     /*border: 1px solid red;*/
     text-align: center;
+    /*opacity: .8;*/
 }
 
 .tab {
@@ -153,7 +157,13 @@ img {
 
 .odd {
     background: #202C2E;
+        opacity: .9;
 }
+
+/*.even {
+    background: #3C4B4D;
+        opacity: .9;
+}*/
 
 .tbl-wrapper {
     width: 410px;
@@ -161,6 +171,11 @@ img {
     float: right;
     overflow: scroll;
 }
+
+/*.sub-hdr {
+     background: #3C4B4D;
+     opacity: .8;
+}*/
 
 .row {
     width: 100%;

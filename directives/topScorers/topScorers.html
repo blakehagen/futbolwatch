@@ -1,4 +1,4 @@
-<div class="top" ng-show="scorers">
+<div class="top sub-hdr" ng-show="scorers">
     <div class="row">
     </div>
     <div class="row row-goals">
@@ -23,7 +23,7 @@
 </div>
 
 <div class="tbl-wrapper" ng-show="scorers">
-    <div class="row row-goals" ng-class-odd="'odd'" ng-repeat="player in scorers">
+    <div class="row row-goals" ng-class-even="'even'" ng-class-odd="'odd'" ng-repeat="player in scorers">
         <div class="row-item sm-goals row-text">
             <h3>{{player.rank}}.</h3>
         </div>

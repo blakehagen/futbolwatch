@@ -1,4 +1,4 @@
-<div class="top" ng-show="league">
+<div class="top sub-hdr" ng-show="league">
     <div class="row league-row">
     </div>
     <div class="row league-row">
@@ -26,7 +26,7 @@
 </div>
 
 <div class="tbl-wrapper" ng-show="league">
-    <div class="row league-row" ng-class-odd="'odd'" ng-repeat="team in league">
+    <div class="row league-row" ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="team in league">
 
         <div class="row-item small row-text">
             <h3>{{team.position}}.</h3>
