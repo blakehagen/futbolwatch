@@ -66,6 +66,7 @@
         margin: 0 4px;
         vertical-align: top;
         text-align: center;
+        cursor: pointer;
     }
     
     .sm-menu-btn-text {
@@ -80,7 +81,15 @@
 
     .mainNormal {
         height: 581px;
-        
+    }
+    
+    .active-sm-button {
+        background: #BD4545;
+        color: #fff;
+    }
+    
+    .sm-button-non-active {
+        background: #1F2A2D;
     }
     
    

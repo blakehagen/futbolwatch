@@ -38,16 +38,16 @@
     </div>
     <!-- Small Menu when clicked -->
     <div class="top responsive-menu" ng-show="smallMenu">
-        <div class="sm-menu-btn">
+        <div class="sm-menu-btn" ng-class="activeTable ? 'active-sm-button' : 'sm-button-non-active'" ng-click="getStandings()">
             <h6 class="sm-menu-btn-text">TABLE</h6>
         </div>
-        <div class="sm-menu-btn">
+        <div class="sm-menu-btn" ng-class="activeFixtures ? 'active-sm-button' : 'sm-button-non-active'" ng-click="getNextMatches()">
             <h6 class="sm-menu-btn-text">FIXTURES</h6>
         </div>
-        <div class="sm-menu-btn">
+        <div class="sm-menu-btn" ng-class="activeResults ? 'active-sm-button' : 'sm-button-non-active'" ng-click="getPreviousMatches()">
             <h6 class="sm-menu-btn-text">RESULTS</h6>
         </div>
-        <div class="sm-menu-btn">
+        <div class="sm-menu-btn" ng-class="activeScorers ? 'active-sm-button' : 'sm-button-non-active'" ng-click="getScorers()">
             <h6 class="sm-menu-btn-text">SCORERS</h6>
         </div>
     </div>
