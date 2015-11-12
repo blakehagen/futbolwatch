@@ -20,11 +20,7 @@ body {
     height: 100%;
     background: url('/assets/optimized/background-final-compressor.png');
     background-size: cover;
-}
-
-.body {
-    background: url('/assets/optimized/background-final-compressor.png');
-    background-size: cover;
+    display: block;
 }
 
 h1,h2,h3,h4,h5,h6 {
