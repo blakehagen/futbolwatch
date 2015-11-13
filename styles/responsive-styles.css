@@ -58,7 +58,6 @@
         text-align: center;
         background: #3C4B4D;
         opacity: .9;
-        vertical-align: bottom;
     }
     
     .sm-menu-btn {
@@ -167,7 +166,6 @@
         width: 5%;
         margin-left: 2px;
     }
-   
 }
 
 @media (max-width: 400px){

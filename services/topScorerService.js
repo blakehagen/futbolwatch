@@ -8,7 +8,6 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
             headers: {'authorization': 'Bearer SHeFsTtg4WWq3VPnDTPFMDtJqGeDnwbQ'}
         }).then(function (response) {
             var topScorersData = response.data.results.collection;
-
             // Format Names to not be just initial of first name
             var formatName = function (str) {
                 var formatted;
@@ -28,9 +27,7 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
                 formatted = scorers.join(' ');
                 return formatted;
             }
-
             var topScorers = [];
-
             for (var i = 0; i < topScorersData.length; i++) {
                 if (topScorersData[i].team === 'Rayo Vallecano de Madrid') {
                     topScorersData[i].team = 'Rayo Vallecano';
@@ -68,7 +65,6 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
                 if (topScorersData[i].team === 'Tottenham Hotspur') {
                     topScorersData[i].team = 'Tottenham';
                 }
-
                 topScorersData[i].team = topScorersData[i].team.replace('ACF', '');
                 topScorersData[i].team = topScorersData[i].team.replace('AFC', '');
                 topScorersData[i].team = topScorersData[i].team.replace('CFC', '');
@@ -82,7 +78,6 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
                 topScorersData[i].team = topScorersData[i].team.replace('SCO', '');
                 topScorersData[i].team = topScorersData[i].team.replace('OSC', '');
                 topScorersData[i].team = topScorersData[i].team.replace('SC', '');
-
                 topScorers.push({
                     rank: topScorersData[i].rank,
                     name: formatName(topScorersData[i].name).toUpperCase(),

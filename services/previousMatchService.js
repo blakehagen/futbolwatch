@@ -57,7 +57,6 @@ angular.module('waterCoolerFC').service('previousMatchService', function ($http,
                 if (previousFixtures[i].homeTeamName === 'Tottenham Hotspur FC') {
                     previousFixtures[i].homeTeamName = 'Tottenham';
                 }
-
                 previousFixtures[i].homeTeamName = previousFixtures[i].homeTeamName.replace('ACF', '');
                 previousFixtures[i].homeTeamName = previousFixtures[i].homeTeamName.replace('AFC', '');
                 previousFixtures[i].homeTeamName = previousFixtures[i].homeTeamName.replace('CFC', '');
@@ -72,7 +71,6 @@ angular.module('waterCoolerFC').service('previousMatchService', function ($http,
                 previousFixtures[i].homeTeamName = previousFixtures[i].homeTeamName.replace('OSC', '');
                 previousFixtures[i].homeTeamName = previousFixtures[i].homeTeamName.replace('SC', '');
             }
-
             for (var i = 0; i < previousFixtures.length; i++) {
                 if (previousFixtures[i].awayTeamName === 'Rayo Vallecano de Madrid') {
                     previousFixtures[i].awayTeamName = 'Rayo Vallecano';
@@ -133,7 +131,6 @@ angular.module('waterCoolerFC').service('previousMatchService', function ($http,
                 previousFixtures[i].awayTeamName = previousFixtures[i].awayTeamName.replace('OSC', '');
                 previousFixtures[i].awayTeamName = previousFixtures[i].awayTeamName.replace('SC', '');
             }
-
             for (var i = 0; i < previousFixtures.length; i++) {
                 previous.push({
                     date: moment(previousFixtures[i].date).format('ddd, MMM D, YYYY'),
@@ -149,11 +146,4 @@ angular.module('waterCoolerFC').service('previousMatchService', function ($http,
         })
         return deferred.promise
     }
-
-
-
-
-
-
-
 });

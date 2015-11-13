@@ -10,7 +10,6 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
             // console.log(response.data.fixtures);
             var upcomingFixtures = response.data.fixtures;
             var upcoming = [];
-
             for (var i = 0; i < upcomingFixtures.length; i++) {
                 if (upcomingFixtures[i].homeTeamName === 'Rayo Vallecano de Madrid') {
                     upcomingFixtures[i].homeTeamName = 'Rayo Vallecano';
@@ -57,7 +56,6 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
                 if (upcomingFixtures[i].homeTeamName === 'Tottenham Hotspur FC') {
                     upcomingFixtures[i].homeTeamName = 'Tottenham';
                 }
-
                 upcomingFixtures[i].homeTeamName = upcomingFixtures[i].homeTeamName.replace('ACF', '');
                 upcomingFixtures[i].homeTeamName = upcomingFixtures[i].homeTeamName.replace('AFC', '');
                 upcomingFixtures[i].homeTeamName = upcomingFixtures[i].homeTeamName.replace('CFC', '');
@@ -72,7 +70,6 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
                 upcomingFixtures[i].homeTeamName = upcomingFixtures[i].homeTeamName.replace('OSC', '');
                 upcomingFixtures[i].homeTeamName = upcomingFixtures[i].homeTeamName.replace('SC', '');
             }
-
             for (var i = 0; i < upcomingFixtures.length; i++) {
                 if (upcomingFixtures[i].awayTeamName === 'Rayo Vallecano de Madrid') {
                     upcomingFixtures[i].awayTeamName = 'Rayo Vallecano';
@@ -133,7 +130,6 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
                 upcomingFixtures[i].awayTeamName = upcomingFixtures[i].awayTeamName.replace('OSC', '');
                 upcomingFixtures[i].awayTeamName = upcomingFixtures[i].awayTeamName.replace('SC', '');
             }
-
             for (var i = 0; i < upcomingFixtures.length; i++) {
                 upcoming.push({
                     matchDate: moment(upcomingFixtures[i].date).format('MM/DD'),

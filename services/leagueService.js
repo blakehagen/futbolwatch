@@ -13,7 +13,6 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
             // console.log(response.data);
             var leagueData = response.data.standing;
             var leagueStandings = [];
-
             for (var i = 0; i < leagueData.length; i++) {
                 if (leagueData[i].teamName === 'Rayo Vallecano de Madrid') {
                     leagueData[i].teamName = 'Rayo Vallecano';
@@ -58,7 +57,6 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
                 leagueData[i].teamName = leagueData[i].teamName.replace('ACF', '');
                 leagueData[i].teamName = leagueData[i].teamName.replace('AFC', '');
                 leagueData[i].teamName = leagueData[i].teamName.replace('CFC', '');
-
                 leagueData[i].teamName = leagueData[i].teamName.replace('FC', '');
                 leagueData[i].teamName = leagueData[i].teamName.replace('CF', '');
                 leagueData[i].teamName = leagueData[i].teamName.replace('UD', '');
@@ -70,7 +68,6 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
                 leagueData[i].teamName = leagueData[i].teamName.replace('OSC', '');
                 leagueData[i].teamName = leagueData[i].teamName.replace('SC', '');
             }
-
             for (var i = 0; i < leagueData.length; i++) {
                 leagueStandings.push({
                     league: response.data.leagueCaption,

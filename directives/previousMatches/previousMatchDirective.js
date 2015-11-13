@@ -1,11 +1,9 @@
 angular.module('waterCoolerFC').directive('previousMatches', function () {
     return {
         templateUrl: 'directives/previousMatches/previousMatchDirectiveTmpl.html',
-
         scope: {
             previous: '='
         },
-
         controller: function ($scope) {
             // Filter by Match Day on Previous Matches Tab
             $scope.matchDayOptions = [

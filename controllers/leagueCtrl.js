@@ -1,10 +1,8 @@
 angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idService, leagueService, upcomingMatchesService, previousMatchService, topScorerService) {
-    
     // Get League ID from idService
     $scope.id = function () {
         $scope.leagueData = idService.getLeagueId();
     }
-
     $scope.id();
     
     // Set ng-class to highlight the current active tab view
@@ -44,10 +42,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         }
     };
 
-    // if ($scope.id !== false) {
     $scope.getStandings(); // ---> default to show Standings on Load
-    // }
-    
     
     // Get Upcoming Matches
     $scope.toggleNextMatches = false;
@@ -71,7 +66,6 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
             $scope.activeScorers = false;
             $scope.activeInfo = false;
         }
-
     };
     
     // Get Previous Matches

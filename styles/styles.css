@@ -81,14 +81,12 @@ img {
 }
 
 /* Main View */
-
 .main-wrapper {
     width: 590px;
     height: 514px;
     margin: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
-
     border: 10px solid #455859;
     box-shadow: 8px 8px 30px #262626;
     vertical-align: middle;
@@ -122,7 +120,6 @@ img {
 .responsive-menu {
     display: none;
 }
-
 /* -- -- -- -- -- -- -- -- -- */
 
 .title {
@@ -153,7 +150,6 @@ img {
 }
 
 /* Content Views (for directives) */
-
 .odd {
     background: #202C2E;
         opacity: .9;
@@ -273,7 +269,6 @@ img {
 }
 
 /* Filters */
-
 .filter {
     width: 110px;
     display: inline-block;
@@ -324,7 +319,6 @@ img {
 }
 
 /* Footer */
-
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
