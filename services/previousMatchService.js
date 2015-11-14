@@ -5,8 +5,7 @@ angular.module('waterCoolerFC').service('previousMatchService', function ($http,
         $http({
             method: 'GET',
             url: 'http://api.football-data.org/alpha/soccerseasons/' + leagueId + '/fixtures/?timeFrame=p120',
-            headers: { 'X-Auth-Token': '57d24f023e8247aea4badd00e37328dc' },
-            mode: 'no-cors'
+            headers: { 'X-Auth-Token': '57d24f023e8247aea4badd00e37328dc' }
         }).then(function (response) {
             // console.log(response.data.fixtures);
             var previousFixtures = response.data.fixtures;
