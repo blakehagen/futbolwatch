@@ -1,4 +1,4 @@
 module.exports = {
-    db: 'mongodb://bmh43:bmh43@ds053944.mongolab.com:53944/watercooler-fc',
+    db: 'mongodb://mongodb://bmh43:blak3yhh@ds053894.mongolab.com:53894/friends',
     sessionSecret: 'developmentSecret'
 };
