@@ -7,13 +7,13 @@ var port = process.env.PORT || 8000;
 
 
 // Including the configured express and mongoose objects
-var mongoose = require('./core/server/config/mongoose'),
-    express = require('./core/server/config/express');
+// var mongoose = require('./core/server/config/mongoose'),
+   var express = require('./core/server/config/express');
 
 
 // Let's run this!
-var db = mongoose(),
-    app = express();
+// var db = mongoose();
+   var app = express();
 
 
 // Let's listen for incoming calls!
