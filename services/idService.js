@@ -3,7 +3,7 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
         if ($stateParams.league === 'epl') {
             return {
                 leagueId: 398,
-                leagueLogoPath: '/assets/optimized/epl-compressor.png',
+                leagueLogoPath: './assets/optimized/epl-compressor.png',
                 // flagPath: 'assets/england.png',
                 leagueHeader: "ENGLISH PREMIER LEAGUE",
                 topScorerId: 'ce15ltey',
