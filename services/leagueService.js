@@ -13,6 +13,10 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
         }).then(function (response) {
             console.log(response.data.results.collection1);
             var leagueData = response.data.results.collection1;
+            leagueData = JSON.stringify(leagueData);
+            leagueData = str.replace(/playedGames/g,'gamesPlayed');
+            leagueData = JSON.parse(leagueData);
+            
             var leagueStandings = [];
             for (var i = 0; i < leagueData.length; i++) {
                 if (leagueData[i].team.text === 'Rayo Vallecano de Madrid') {
@@ -87,7 +91,6 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
                     losses: leagueData[i].losses,
                     draws: leagueData[i].draws,
                     gamesPlayed: leagueData[i].gamesPlayed,
-                    gamesPlayed: leagueData[i].playedGames
                 });
             }
             console.log(leagueStandings);
