@@ -90,5 +90,34 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
             deferred.resolve(topScorers)
         })
         return deferred.promise
-    }
+    };
+
+    this.newApiTest = function () {
+        var deferred = $q.defer();
+        $http({
+            method: 'GET',
+            url: 'http://www.xmlsoccer.com/FootballDataDemo.asmx/GetLeagueStandingsBySeason?ApiKey=ZDWHYYRPDCFXURDLPDTOFOAQCALBHWCPUYKXIKZJSHNVDKCKUK&league=2&seasonDateString=1516',
+            transformResponse: function (cnv) {
+                var x2js = new X2JS();
+                var aftCnv = x2js.xml_str2json(cnv);
+                return aftCnv;
+            }
+        }).then(function (response) {
+            console.log(response);
+
+
+
+
+            deferred.resolve(response)
+        })
+        return deferred.promise
+    };
+
+
+
+
+
+
+
+
 });
