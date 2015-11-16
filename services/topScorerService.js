@@ -99,8 +99,9 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
             url: 'http://www.xmlsoccer.com/FootballDataDemo.asmx/GetLeagueStandingsBySeason?ApiKey=ZDWHYYRPDCFXURDLPDTOFOAQCALBHWCPUYKXIKZJSHNVDKCKUK&league=2&seasonDateString=1516',
             
             headers: {'Access-Control-Allow-Headers' : '*',
-                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Origin': 'http://blakehagen.github.io',
                     'Access-Control-Allow-Methods': 'POST, GET, OPTIONS'
+ 
             },
             
             
