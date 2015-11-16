@@ -14,9 +14,10 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
             console.log(response.data.results.collection1);
             var leagueData = response.data.results.collection1;
             leagueData = JSON.stringify(leagueData);
-            leagueData = leagueData.replace(/playedGames/g,'gamesPlayed');
+            leagueData = leagueData.replace(/playedGames/g, 'gamesPlayed');
+            leagueData = leagueData.replace(/matchesPlayed/g, 'gamesPlayed');
             leagueData = JSON.parse(leagueData);
-            
+
             var leagueStandings = [];
             for (var i = 0; i < leagueData.length; i++) {
                 if (leagueData[i].team.text === 'Rayo Vallecano de Madrid') {
