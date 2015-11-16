@@ -14,7 +14,7 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
             console.log(response.data.results.collection1);
             var leagueData = response.data.results.collection1;
             leagueData = JSON.stringify(leagueData);
-            leagueData = str.replace(/playedGames/g,'gamesPlayed');
+            leagueData = leagueData.replace(/playedGames/g,'gamesPlayed');
             leagueData = JSON.parse(leagueData);
             
             var leagueStandings = [];
