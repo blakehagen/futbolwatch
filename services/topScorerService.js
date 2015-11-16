@@ -96,7 +96,7 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
         var deferred = $q.defer();
         $http({
             method: 'GET',
-            url: 'http://www.xmlsoccer.com/FootballDataDemo.asmx/GetLeagueStandingsBySeason?ApiKey=ZDWHYYRPDCFXURDLPDTOFOAQCALBHWCPUYKXIKZJSHNVDKCKUK&league=2&seasonDateString=1516',
+            url: 'https://www.xmlsoccer.com/FootballDataDemo.asmx/GetLeagueStandingsBySeason?ApiKey=ZDWHYYRPDCFXURDLPDTOFOAQCALBHWCPUYKXIKZJSHNVDKCKUK&league=2&seasonDateString=1516',
             
             headers: {'Access-Control-Allow-Headers' : '*',
                     'Access-Control-Allow-Origin': 'http://blakehagen.github.io',
