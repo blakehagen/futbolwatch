@@ -92,36 +92,6 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
         return deferred.promise
     };
 
-    this.newApiTest = function () {
-        var deferred = $q.defer();
-        $http({
-            method: 'GET',
-            url: 'https://www.xmlsoccer.com/FootballDataDemo.asmx/GetLeagueStandingsBySeason?ApiKey=ZDWHYYRPDCFXURDLPDTOFOAQCALBHWCPUYKXIKZJSHNVDKCKUK&league=2&seasonDateString=1516',
-            
-            headers: {'Access-Control-Allow-Headers' : '*',
-                    'Access-Control-Allow-Origin': 'http://blakehagen.github.io',
-                    'Access-Control-Allow-Methods': 'POST, GET, OPTIONS'
- 
-            },
-            
-            
-            transformResponse: function (cnv) {
-                var x2js = new X2JS();
-                var aftCnv = x2js.xml_str2json(cnv);
-                return aftCnv;
-            }
-        }).then(function (response) {
-            console.log(response);
-
-
-
-
-            deferred.resolve(response)
-        })
-        return deferred.promise
-    };
-
-
 
 
 

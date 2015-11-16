@@ -142,14 +142,5 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
     
     
     
-    $scope.test = function(){
-        topScorerService.newApiTest().then(function (response) {
-                $scope.test = response;
-            })
-    }
-    
-    $scope.test();
-    
-    
     
 });
