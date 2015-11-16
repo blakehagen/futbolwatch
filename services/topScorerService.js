@@ -97,6 +97,13 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
         $http({
             method: 'GET',
             url: 'http://www.xmlsoccer.com/FootballDataDemo.asmx/GetLeagueStandingsBySeason?ApiKey=ZDWHYYRPDCFXURDLPDTOFOAQCALBHWCPUYKXIKZJSHNVDKCKUK&league=2&seasonDateString=1516',
+            
+            headers: {'Access-Control-Allow-Headers' : '*',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'POST, GET, OPTIONS'
+            },
+            
+            
             transformResponse: function (cnv) {
                 var x2js = new X2JS();
                 var aftCnv = x2js.xml_str2json(cnv);
