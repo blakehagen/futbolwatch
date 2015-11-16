@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="waterCoolerFC">
 <script>
-    var host = "blakehagen.github.io/watercooler-fc/";
-    if ((host == window.location.host) && (window.location.protocol != "https:"))
-        window.location.protocol = "https";
+if (window.location.protocol != "https:")
+    window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
 </script>
 
 
