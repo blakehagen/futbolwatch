@@ -86,7 +86,8 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
                     wins: leagueData[i].wins,
                     losses: leagueData[i].losses,
                     draws: leagueData[i].draws,
-                    gamesPlayed: leagueData[i].gamesPlayed
+                    gamesPlayed: leagueData[i].gamesPlayed,
+                    gamesPlayed: leagueData[i].playedGames
                 });
             }
             console.log(leagueStandings);
