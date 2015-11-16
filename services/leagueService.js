@@ -81,7 +81,7 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
                 });
             }
             console.log(leagueStandings);
-            deferred.resolve(response)
+            deferred.resolve(leagueStandings)
         })
         return deferred.promise
     }
