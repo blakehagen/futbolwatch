@@ -18,6 +18,9 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
                 if (leagueData[i].team.text === 'Rayo Vallecano de Madrid') {
                     leagueData[i].team.text = 'Rayo Vallecano';
                 }
+                if (leagueData[i].team.text === 'Futbol Club Barcelona') {
+                    leagueData[i].team.text = 'Barcelona';
+                }
                 if (leagueData[i].team.text === 'Real Sociedad de Fútbol') {
                     leagueData[i].team.text = 'Real Sociedad';
                 }
@@ -36,23 +39,29 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
                 if (leagueData[i].team.text === 'Club Atlético de Madrid') {
                     leagueData[i].team.text = 'Atlético Madrid';
                 }
-                if (leagueData[i].team.text === 'RC Deportivo La Coruna') {
+                if (leagueData[i].team.text === 'Deportivo La Coruna') {
                     leagueData[i].team.text = 'La Coruña';
                 }
-                if (leagueData[i].team.text === 'Bor. Mönchengladbach') {
+                if (leagueData[i].team.text === 'Borussia Mönchengladbach') {
                     leagueData[i].team.text = 'M.Gladbach';
                 }
-                if (leagueData[i].team.text === 'FC Internazionale Milano') {
+                if (leagueData[i].team.text === 'Internazionale') {
                     leagueData[i].team.text = 'Inter Milano';
                 }
                 if (leagueData[i].team.text === 'Académica de Coimbra') {
                     leagueData[i].team.text = 'Académica Coimbra';
                 }
-                if (leagueData[i].team.text === 'West Bromwich Albion FC') {
+                if (leagueData[i].team.text === 'West Bromwich Albion') {
                     leagueData[i].team.text = 'West Brom';
                 }
-                if (leagueData[i].team.text === 'Tottenham Hotspur FC') {
+                if (leagueData[i].team.text === 'Tottenham Hotspur') {
                     leagueData[i].team.text = 'Tottenham';
+                }
+                if (leagueData[i].team.text === 'PSV') {
+                    leagueData[i].team.text = 'PSV Eindhoven';
+                }
+                if (leagueData[i].team.text === 'AZ') {
+                    leagueData[i].team.text = 'AZ Alkmaar';
                 }
 
                 leagueData[i].team.text = leagueData[i].team.text.replace('ACF', '');
