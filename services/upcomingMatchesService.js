@@ -147,7 +147,7 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
                 var deferred = $q.defer();
         $http({
             method: 'GET',
-            url: 'http://localhost:3000/data'
+            url: 'https://localhost:3000/data'
         }).then(function(response){
             deferred.resolve(response)
         })
