@@ -144,10 +144,14 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
     
     
     this.test = function(){
-        return $http({
+                var deferred = $q.defer();
+        $http({
             method: 'GET',
             url: 'http://www.xmlsoccer.com/FootballData.asmx/GetLeagueStandingsBySeason?ApiKey=ZDWHYYRPDCFXURDLPDTOFOAQCALBHWCPUYKXIKZJSHNVDKCKUK&league=54&seasonDateString=1516'
-        });
+        }).then(function(response){
+            deferred.resolve(response)
+        })
+        return deferred.promise
     };
     
     

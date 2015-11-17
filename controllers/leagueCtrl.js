@@ -143,9 +143,10 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
     
     
     $scope.tester = function(){
-        $scope.test = upcomingMatchesService.test();
-        console.log($scope.test);
-    }
+       upcomingMatchesService.test().then(function(response){
+           $scope.test = response;
+       })           
+    };
     
     $scope.tester();
     
