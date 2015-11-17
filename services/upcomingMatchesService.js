@@ -141,4 +141,14 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
         })
         return deferred.promise
     }
+    
+    
+    this.test = function(){
+        return $http({
+            method: 'GET',
+            url: 'http://www.xmlsoccer.com/FootballData.asmx/GetLeagueStandingsBySeason?ApiKey=ZDWHYYRPDCFXURDLPDTOFOAQCALBHWCPUYKXIKZJSHNVDKCKUK&league=54&seasonDateString=1516'
+        });
+    };
+    
+    
 });
