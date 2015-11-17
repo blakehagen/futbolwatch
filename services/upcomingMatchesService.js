@@ -147,7 +147,7 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
                 var deferred = $q.defer();
         $http({
             method: 'GET',
-            url: 'http://www.xmlsoccer.com/FootballData.asmx/GetLeagueStandingsBySeason?ApiKey=ZDWHYYRPDCFXURDLPDTOFOAQCALBHWCPUYKXIKZJSHNVDKCKUK&league=54&seasonDateString=1516'
+            url: 'localhost:3000/data'
         }).then(function(response){
             deferred.resolve(response)
         })
