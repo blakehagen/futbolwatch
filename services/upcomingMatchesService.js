@@ -147,7 +147,7 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
                 var deferred = $q.defer();
         $http({
             method: 'GET',
-            url: 'https://arcane-shelf-9990.herokuapp.com//data'
+            url: 'https://arcane-shelf-9990.herokuapp.com/data'
         }).then(function(response){
             deferred.resolve(response)
         })
