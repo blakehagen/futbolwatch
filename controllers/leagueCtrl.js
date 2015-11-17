@@ -139,17 +139,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
     $scope.toggleSmallMenu = function () {
         $scope.smallMenu = !$scope.smallMenu;
     }
-    
-    
-    
-    $scope.tester = function(){
-       upcomingMatchesService.test().then(function(response){
-           $scope.test = response;
-           console.log($scope.test);
-       })           
-    };
-    
-    $scope.tester();
+
     
     
     
