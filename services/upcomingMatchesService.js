@@ -4,10 +4,11 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
         var deferred = $q.defer();
         $http({
             method: 'GET',
-            url: 'https://intense-mesa-4543.herokuapp.com/fixtures'
+            url: 'https://intense-mesa-4543.herokuapp.com/fixtures',
+            data: leagueId
         }).then(function (response) {
             // console.log(response.data.fixtures);
-            var upcomingFixtures = response.data.fixtures;
+            var upcomingFixtures = response.data.fixtures;f
             var upcoming = [];
             for (var i = 0; i < upcomingFixtures.length; i++) {
                 if (upcomingFixtures[i].homeTeamName === 'Rayo Vallecano de Madrid') {
