@@ -8,7 +8,7 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
             data: leagueId
         }).then(function (response) {
             // console.log(response.data.fixtures);
-            var upcomingFixtures = response.data.fixtures;f
+            var upcomingFixtures = response.data.fixtures;
             var upcoming = [];
             for (var i = 0; i < upcomingFixtures.length; i++) {
                 if (upcomingFixtures[i].homeTeamName === 'Rayo Vallecano de Madrid') {
