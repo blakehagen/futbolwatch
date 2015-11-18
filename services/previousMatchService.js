@@ -132,7 +132,7 @@ angular.module('waterCoolerFC').service('previousMatchService', function ($http,
             }
             for (var i = 0; i < previousFixtures.length; i++) {
                 previous.push({
-                    date: moment(previousFixtures[i].date).format('ddd, MMM D, YYYY'),
+                    // date: moment(previousFixtures[i].date).format('ddd, MMM D, YYYY'),
                     matchDay: previousFixtures[i].matchday,
                     homeTeam: previousFixtures[i].homeTeamName.toUpperCase(),
                     homeTeamGoals: previousFixtures[i].result.goalsHomeTeam,

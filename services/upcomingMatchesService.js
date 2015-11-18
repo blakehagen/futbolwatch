@@ -4,8 +4,7 @@ angular.module('waterCoolerFC').service('upcomingMatchesService', function ($htt
         var deferred = $q.defer();
         $http({
             method: 'GET',
-            url: 'http://api.football-data.org/alpha/soccerseasons/' + leagueId + '/fixtures/?timeFrame=n21',
-            headers: { 'X-Auth-Token': '57d24f023e8247aea4badd00e37328dc' }
+            url: 'https://intense-mesa-4543.herokuapp.com/results'
         }).then(function (response) {
             // console.log(response.data.fixtures);
             var upcomingFixtures = response.data.fixtures;
