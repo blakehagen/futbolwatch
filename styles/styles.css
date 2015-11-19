@@ -28,16 +28,14 @@ body {
     display: -ms-flexbox;
     display: -webkit-flex;   
     display: flex; 
-    justify-content: -webkit-box;
-    justify-content: -moz-box; 
-    justify-content: -ms-flexbox;
-    justify-content: -webkit-flex;  
-    justify-content: center;
-    align-items: -webkit-box;
-    align-items: -moz-box; 
-    align-items: -ms-flexbox;
-    align-items: -webkit-flex;  
-    align-items: center;
+   	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
 }
 
 h1,h2,h3,h4,h5,h6 {
