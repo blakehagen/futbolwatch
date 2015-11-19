@@ -182,7 +182,7 @@ img {
     width: 410px;
     height: 360px;
     float: right;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .sub-hdr {
