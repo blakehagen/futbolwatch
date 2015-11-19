@@ -4,8 +4,7 @@ angular.module('waterCoolerFC').service('previousMatchService', function ($http,
         var deferred = $q.defer();
         $http({
             method: 'GET',
-            url: 'https://intense-mesa-4543.herokuapp.com/results',
-            data: leagueId
+            url: 'https://intense-mesa-4543.herokuapp.com/results?league=' + leagueId
         }).then(function (response) {
             // console.log(response.data.fixtures);
             var previousFixtures = response.data.fixtures;
