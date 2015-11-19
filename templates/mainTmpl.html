@@ -24,6 +24,7 @@
     <div class="top title">
         <h1><a href="{{leagueData.previousTeam}}"><span><&nbsp;</span></a> {{leagueData.leagueHeader}} <a href="{{leagueData.nextTeam}}"><span>&nbsp;></span></a></h1>
     </div>
+
     <!-- This is for when the screen is smaller -->
     <div class="top sub-hdr top-responsive">
         <div class="img-container left">
@@ -52,11 +53,27 @@
         </div>
     </div>
 
-    <league-standings league="league" ng-show="toggleStandings"></league-standings>
+    <div class="top bkgrnd">
+        <league-standings league="league" ng-show="toggleStandings"></league-standings>
+
+        <upcoming-matches next="next" ng-show="toggleNextMatches"></upcoming-matches>
+
+        <previous-matches previous="previous" ng-show="togglePreviousMatches"></previous-matches>
+
+        <top-scorers scorers="scorers" ng-show="toggleScorers"></top-scorers>
+    </div>
+
+
+
+
+
+
+
+    <!--<league-standings league="league" ng-show="toggleStandings"></league-standings>
 
     <upcoming-matches next="next" ng-show="toggleNextMatches"></upcoming-matches>
 
     <previous-matches previous="previous" ng-show="togglePreviousMatches"></previous-matches>
 
-    <top-scorers scorers="scorers" ng-show="toggleScorers"></top-scorers>
+    <top-scorers scorers="scorers" ng-show="toggleScorers"></top-scorers>-->
 </div>
