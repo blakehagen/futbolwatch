@@ -142,10 +142,6 @@
         padding-left: 3px;
     }
     
-    .team-hdr-results {
-        width: 40%;
-    }
-    
     .small {
         width: 7%;
     }
@@ -161,7 +157,7 @@
     }
     
     .team-hdr-results {
-        width: 41%
+        width: 40%
     }
     
     .sm-goals {
