@@ -152,6 +152,8 @@
     
     .date-hdr-next {
         width: 9%;
+        margin-left: 0;
+        padding-left: 10px;
     }
     
     .h3-date {
@@ -164,7 +166,8 @@
     
     .sm-goals {
         width: 5%;
-        margin-left: 2px;
+        margin-left: 0px;
+        padding-left: 10px;
     }
 }
 
