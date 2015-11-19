@@ -2,8 +2,8 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
     this.getLeagueId = function () {
         if ($stateParams.league === 'epl') {
             return {
-                leagueId: 'dv41vq9a',
-                // leagueId: 398,
+                leagueIdKimono: 'dv41vq9a',
+                leagueId: 398,
                 leagueLogoPath: './assets/optimized/epl-compressor.png',
                 // flagPath: 'assets/england.png',
                 leagueHeader: "ENGLISH PREMIER LEAGUE",
@@ -13,8 +13,8 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
             }
         } else if ($stateParams.league === 'spanish-primera') {
             return {
-                leagueId: 'abq5nqls',
-                // leagueId: 399,
+                leagueIdKimono: 'abq5nqls',
+                leagueId: 399,
                 leagueLogoPath: './assets/optimized/laliga-compressor.png',
                 // flagPath: 'assets/spain.png',
                 leagueHeader: "SPANISH PRIMERA",
@@ -24,8 +24,8 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
             }
         } else if ($stateParams.league === 'bundesliga') {
             return {
-                leagueId: '379n3ymy',
-                // leagueId: 394,
+                leagueIdKimono: '379n3ymy',
+                leagueId: 394,
                 leagueLogoPath: './assets/optimized/bundesliga-compressor.png',
                 // flagPath: 'assets/germany.png',
                 leagueHeader: "GERMAN BUNDESLIGA",
@@ -35,8 +35,8 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
             }
         } else if ($stateParams.league === 'eredivisie') {
             return {
-                leagueId: 'adu2wboi',
-                // leagueId: 404,
+                leagueIdKimono: 'adu2wboi',
+                leagueId: 404,
                 leagueLogoPath: './assets/optimized/eredivisie-compressor.png',
                 // flagPath: 'assets/netherlands.png',
                 leagueHeader: "DUTCH EREDIVISIE",
@@ -46,8 +46,8 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
             }
         } else if ($stateParams.league === 'serie-a') {
             return {
-                leagueId: 'ejr3kwbo',
-                // leagueId: 401,
+                leagueIdKimono: 'ejr3kwbo',
+                leagueId: 401,
                 leagueLogoPath: './assets/optimized/serie-a.png',
                 // flagPath: 'assets/italy.png',
                 leagueHeader: "ITALY SERIE A",
@@ -57,8 +57,8 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
             }
         } else if ($stateParams.league === 'portugal-primeira') {
             return {
-                leagueId: '40dxlnkq',
-                // leagueId: 402,
+                leagueIdKimono: '40dxlnkq',
+                leagueId: 402,
                 leagueLogoPath: './assets/optimized/portugal-compressor.png',
                 // flagPath: 'assets/portugal.png',
                 leagueHeader: "PORTUGAL PRIMEIRA",
@@ -68,8 +68,8 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
             }
         } else if ($stateParams.league === 'ligue1') {
             return {
-                leagueId: 'a20ppviy',
-                // leagueId: 396,
+                leagueIdKimono: 'a20ppviy',
+                leagueId: 396,
                 leagueLogoPath: './assets/optimized/ligue1-compressor.png',
                 // flagPath: 'assets/france.png',
                 leagueHeader: "FRANCE LIGUE 1",
@@ -79,7 +79,7 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
             }
         } else if ($stateParams.league === 'champions-league') {
             return {
-                // leagueId: 405,
+                leagueId: 405,
                 leagueLogoPath: './assets/optimized/champions-league-compressor.png',
                 // flagPath: 'assets/uefa./.gif',
                 leagueHeader: "UEFA CHAMPIONS LEAGUE",

@@ -24,7 +24,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
             $scope.activeInfo = true;
             return false;
         } else {
-            leagueService.getLeagueData($scope.leagueData.leagueId).then(function (response) {
+            leagueService.getLeagueData($scope.leagueData.leagueIdKimono).then(function (response) {
                 $scope.league = response;
             })
 
