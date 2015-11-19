@@ -11,7 +11,7 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
             // url: 'http://api.football-data.org/alpha/soccerseasons/' + leagueId + '/leagueTable',
             // headers: { 'X-Auth-Token': '57d24f023e8247aea4badd00e37328dc' }
         }).then(function (response) {
-            console.log(response.data.results.collection1);
+            // console.log(response.data.results.collection1);
             var leagueData = response.data.results.collection1;
             leagueData = JSON.stringify(leagueData);
             leagueData = leagueData.replace(/playedGames/g, 'gamesPlayed');
@@ -94,7 +94,7 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
                     gamesPlayed: leagueData[i].gamesPlayed,
                 });
             }
-            console.log(leagueStandings);
+            // console.log(leagueStandings);
             deferred.resolve(leagueStandings)
         })
         return deferred.promise
