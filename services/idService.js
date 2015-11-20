@@ -8,7 +8,7 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
                 leagueHeader: "ENGLISH PREMIER LEAGUE",
                 topScorerId: 'ce15ltey',
                 nextTeam: '#/leagues/spanish-primera',
-                previousTeam: '#/champions-league'
+                previousTeam: '#/leagues/champions-league'
             }
         } else if ($stateParams.league === 'spanish-primera') {
             return {
