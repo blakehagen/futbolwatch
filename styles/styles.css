@@ -224,15 +224,14 @@ img {
     height: 36px;
     padding-right: 7px;
     /*border: 1px solid lightpink;*/
-    float: right;
 }
 
 .row-goals {
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .league-row {
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .row-item {
@@ -258,7 +257,7 @@ img {
 .row-left {
     text-align: left;
     line-height: 33px;
-    padding-left: 12px;  
+    padding-left: 8px;  
 }
 
 .small {
@@ -266,7 +265,7 @@ img {
 }
 
 .team-hdr {
-    width: 190px;
+    width: 175px;
 }
 
 .goals {
@@ -274,12 +273,11 @@ img {
 }
 
 .goals-name {
-    width: 148px;
+    width: 150px;
 }
 
 .sm-goals {
     width: 20px;
-    margin-left: 3px;
 }
 
 .no-margin {
