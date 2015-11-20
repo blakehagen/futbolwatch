@@ -149,17 +149,21 @@ img {
 .bkgrnd {
     height: 427px;
     background: #3C4B4D;
+    opacity: 0.9;
 }
 
-.info {
+.info-main {
+    width: 410px;
+    height: 427px;
+    /*border: 1px solid yellow;*/
+    float: right;
     background: #3C4B4D;
+    opacity: 0.9;
     text-align: center;
-
 }
 
 .contact {
     height: 25px;
-    background: #3C4B4D;
 }
 
 .fa {
