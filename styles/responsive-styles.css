@@ -143,18 +143,13 @@
         width: 40%;
     }
     
-    .nxt-text {
-        padding-left: 3px;
-    }
-    
     .small {
-        width: 7%;
+        width: 8%;
     }
     
     .date-hdr-next {
         width: 9%;
         margin-left: 0;
-        padding-left: 10px;
     }
     
     .h3-date {
@@ -162,13 +157,13 @@
     }
     
     .team-hdr-results {
-        width: 40%
+        width: 39%
     }
     
     .sm-goals {
         width: 5%;
         margin-left: 0px;
-        padding-left: 10px;
+        padding-left: 2px;
     }
 }
 

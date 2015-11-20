@@ -67,7 +67,7 @@ h2 {
 }
 
 h3 {
-    font-size: 13px;
+    font-size: 12px;
     color: #FFF;
     font-weight: 100;
 }
@@ -177,7 +177,6 @@ img {
 .logo {
     width: 100%;
     height: 134px;
-    /*border: 1px solid red;*/
     text-align: center;
     opacity: 0.9;
 }
@@ -186,7 +185,6 @@ img {
     width: 100%;
     height: 72px;
     cursor: pointer;
-    /*border: 1px solid greenyellow;*/
 }
 
 .activeTab {
@@ -200,24 +198,25 @@ img {
 /* Content Views (for directives) */
 .odd {
     background: #202C2E;
-        opacity: .9;
+        opacity: 0.9;
 }
 
 .even {
     background: #3C4B4D;
-    opacity: .9;
+    opacity: 0.9;
 }
 
 .tbl-wrapper {
-    width: 410px;
+    width: 100%;
     height: 360px;
     float: right;
     overflow: auto;
+    /*border: 1px solid red;*/
 }
 
 .sub-hdr {
      background: #3C4B4D;
-     opacity: .9;
+     opacity: 0.9;
 }
 
 .row {
@@ -279,8 +278,8 @@ img {
 }
 
 .sm-goals {
-    width: 21px;
-    margin-left: 7px;
+    width: 20px;
+    margin-left: 3px;
 }
 
 .no-margin {
@@ -288,7 +287,8 @@ img {
 }
 
 .date-hdr-next {
-    width: 50px;
+    width: 35px;
+    padding-left: 1px;
     text-align: center;
 }
 
@@ -298,7 +298,7 @@ img {
 }
 
 .sm-next {
-    width: 14px;
+    width: 12px;
     text-align: center;
 }
 
@@ -307,12 +307,12 @@ img {
 }
 
 .results {
-    width: 40px;
+    width: 35px;
     text-align: center;
 }
 
 .team-hdr-results {
-    width: 160px;
+    width: 155px;
     text-align: center;
 }
 
