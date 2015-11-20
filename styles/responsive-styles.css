@@ -25,7 +25,6 @@
     
     img {
         height: 97%;
-        z-index: 999;
     }
     
     .menu {
@@ -46,6 +45,11 @@
     .left {
         margin: 0 15px;
     }
+    
+    .smaller {
+        display: block;
+        height: 57px;
+}
     
     /* SMALL MENU */
     

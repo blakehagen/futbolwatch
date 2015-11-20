@@ -7,7 +7,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
     
     // Set ng-class to highlight the current active tab view
    
-    if ($scope.leagueData.leagueId === null) {
+    if ($scope.leagueData.leagueId == undefined) {
         return false;
     } else {
         $scope.activeTable = false;
@@ -19,7 +19,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
     // Get League Standings
 
     $scope.getStandings = function () {
-        if ($scope.leagueData.leagueId === null) {
+        if ($scope.leagueData.leagueId == undefined) {
             $scope.toggleInfo = true;
             $scope.activeInfo = true;
             return false;
@@ -48,7 +48,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
     $scope.toggleNextMatches = false;
 
     $scope.getNextMatches = function () {
-        if ($scope.leagueData.leagueId === null) {
+        if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
             upcomingMatchesService.getNextMatches($scope.leagueData.leagueId).then(function (response) {
@@ -72,7 +72,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
     $scope.togglePreviousMatches = false;
 
     $scope.getPreviousMatches = function () {
-        if ($scope.leagueData.leagueId === null) {
+        if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
             previousMatchService.getPreviousMatches($scope.leagueData.leagueId).then(function (response) {
@@ -96,7 +96,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
     $scope.toggleScorers = false;
 
     $scope.getScorers = function () {
-        if ($scope.leagueData.leagueId === null) {
+        if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
             topScorerService.getTopScorers($scope.leagueData.topScorerId).then(function (response) {
