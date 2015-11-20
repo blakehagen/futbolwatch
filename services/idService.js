@@ -76,48 +76,8 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
                 leagueLogoPath: './assets/optimized/champions-league-compressor.png',
                 leagueHeader: "UEFA CHAMPIONS LEAGUE",
                 topScorerId: 'dirj8dru',
-                nextTeam: '#/leagues/argentina-primera',
-                previousTeam: '#/leagues/ligue1'
-            }
-        } else if ($stateParams.league === 'argentina-primera') {
-            return {
-                leagueIdKimono: 'db0dxatg',
-                // leagueId: 405,
-                // leagueLogoPath: './assets/optimized/champions-league-compressor.png',
-                leagueHeader: 'ARGENTINA PRIMERA',
-                topScorerId: '6evggbuq',
-                nextTeam: '#/leagues/campeonato-brasileiro',
-                previousTeam: '#/leagues/champions-league'
-            }
-        } else if ($stateParams.league === 'campeonato-brasileiro') {
-            return {
-                leagueIdKimono: '6k73gnk0',
-                // leagueId: 405,
-                // leagueLogoPath: './assets/optimized/champions-league-compressor.png',
-                leagueHeader: 'CAMPEONATO BRASILEIRO',
-                topScorerId: '8c8y6lwo',
-                nextTeam: '#/leagues/liga-mx',
-                previousTeam: '#/leagues/argentina-primera'
-            }
-        } else if ($stateParams.league === 'liga-mx') {
-            return {
-                leagueIdKimono: '22fkshjm',
-                // leagueId: 405,
-                // leagueLogoPath: './assets/optimized/champions-league-compressor.png',
-                leagueHeader: 'MEXICO LIGA MX',
-                topScorerId: 'anjmhs5q',
-                nextTeam: '#/leagues/usa-mls',
-                previousTeam: '#/leagues/campeonato-brasileiro'
-            }
-        } else if ($stateParams.league === 'usa-mls') {
-            return {
-                leagueIdKimono: '57420uo8',
-                // leagueId: 405,
-                // leagueLogoPath: './assets/optimized/champions-league-compressor.png',
-                leagueHeader: 'US MAJOR LEAGUE SOCCER',
-                topScorerId: '522elrzo',
                 nextTeam: '#/leagues/epl',
-                previousTeam: '#/leagues/liga-mx'
+                previousTeam: '#/leagues/ligue1'
             }
         }
     }
