@@ -163,7 +163,8 @@ img {
 }
 
 .fa {
-    color: #FFF
+    color: #FFF;
+    padding-top: 7px;
 }
 
 .sm-item {
