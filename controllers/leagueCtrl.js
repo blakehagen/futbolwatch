@@ -24,7 +24,9 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
             $scope.activeInfo = true;
             return false;
         } else {
+            $scope.loading = true;
             leagueService.getLeagueData($scope.leagueData.leagueIdKimono).then(function (response) {
+                $scope.loading = false;
                 $scope.league = response;
             })
 
@@ -51,9 +53,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
-            $scope.loading = true;
             upcomingMatchesService.getNextMatches($scope.leagueData.leagueId).then(function (response) {
-                $scope.loading = false;
                 $scope.next = response;
             })
             $scope.toggleNextMatches = true;
