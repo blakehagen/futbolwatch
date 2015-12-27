@@ -134,6 +134,16 @@ img {
     margin: 0;
 }
 
+.loading {
+    border: 1px solid red; 
+}
+
+    .loading h2 {
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+    }
+
 /* ONLY SHOW ON SMALLER SCREENS */
 .top-responsive {
     display: none;
