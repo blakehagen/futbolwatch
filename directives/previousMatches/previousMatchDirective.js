@@ -27,7 +27,26 @@ angular.module('waterCoolerFC').directive('previousMatches', function () {
                 { 'matchDay': 17, 'text': '17' },
                 { 'matchDay': 18, 'text': '18' },
                 { 'matchDay': 19, 'text': '19' },
-                { 'matchDay': 20, 'text': '20' }
+                { 'matchDay': 20, 'text': '20' },
+                { 'matchDay': 11, 'text': '21' },
+                { 'matchDay': 12, 'text': '22' },
+                { 'matchDay': 13, 'text': '23' },
+                { 'matchDay': 14, 'text': '24' },
+                { 'matchDay': 15, 'text': '25' },
+                { 'matchDay': 16, 'text': '26' },
+                { 'matchDay': 17, 'text': '27' },
+                { 'matchDay': 18, 'text': '28' },
+                { 'matchDay': 19, 'text': '29' },
+                { 'matchDay': 20, 'text': '30' },
+                { 'matchDay': 11, 'text': '31' },
+                { 'matchDay': 12, 'text': '32' },
+                { 'matchDay': 13, 'text': '33' },
+                { 'matchDay': 14, 'text': '34' },
+                { 'matchDay': 15, 'text': '35' },
+                { 'matchDay': 16, 'text': '36' },
+                { 'matchDay': 17, 'text': '37' },
+                { 'matchDay': 18, 'text': '38' },
+                { 'matchDay': 19, 'text': '39' },
             ];
         }
     }
