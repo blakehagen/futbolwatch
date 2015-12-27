@@ -23,7 +23,9 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
             $scope.activeInfo = true;
             return false;
         } else {
-            $rootScope.loading = true;
+            if(!$scope.league){
+                $rootScope.loading = true;
+            }
             leagueService.getLeagueData($scope.leagueData.leagueIdKimono).then(function (response) {
                 $rootScope.loading = false;
                 $scope.league = response;
@@ -52,7 +54,9 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
-            $rootScope.loading = true;
+            if(!$scope.next){
+                $rootScope.loading = true;
+            }
             upcomingMatchesService.getNextMatches($scope.leagueData.leagueId).then(function (response) {
                 $rootScope.loading = false;
                 $scope.next = response;
@@ -78,7 +82,9 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
-            $rootScope.loading = true;
+            if(!$scope.previous){
+                $rootScope.loading = true;
+            }
             previousMatchService.getPreviousMatches($scope.leagueData.leagueId).then(function (response) {
                 $rootScope.loading = false;
                 $scope.previous = response;
@@ -104,7 +110,9 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
-            $rootScope.loading = true;
+            if(!$scope.scorers){
+                $rootScope.loading = true;
+            }
             topScorerService.getTopScorers($scope.leagueData.topScorerId).then(function (response) {
                 $rootScope.loading = false;
                 $scope.scorers = response;
