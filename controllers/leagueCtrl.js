@@ -51,7 +51,9 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
+            $scope.loading = true;
             upcomingMatchesService.getNextMatches($scope.leagueData.leagueId).then(function (response) {
+                $scope.loading = false;
                 $scope.next = response;
             })
             $scope.toggleNextMatches = true;
