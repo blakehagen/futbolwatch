@@ -17,15 +17,15 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
     }
 
     // Get League Standings
-            $scope.loading = true;
     $scope.getStandings = function () {
         if ($scope.leagueData.leagueId == undefined) {
             $scope.toggleInfo = true;
             $scope.activeInfo = true;
             return false;
         } else {
-
+            $scope.loading = true;
             leagueService.getLeagueData($scope.leagueData.leagueIdKimono).then(function (response) {
+                $scope.loading = false;
                 $scope.league = response;
             })
 
@@ -141,8 +141,8 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         $scope.smallMenu = !$scope.smallMenu;
     }
 
-    
-    
-    
-    
+
+
+
+
 });
