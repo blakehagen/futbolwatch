@@ -225,6 +225,7 @@ img {
     height: 360px;
     float: right;
     overflow: auto;
+    -ms-overflow-style: none;
     /*border: 1px solid red;*/
 }
 
