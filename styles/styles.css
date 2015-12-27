@@ -134,14 +134,11 @@ img {
     margin: 0;
 }
 
-.loading {
-
-}
-
-    .loading h2 {
+    .bkgrnd h2 {
         color: #fff;
         text-align: center;
         font-size: 14px;
+        margin: 0;
     }
 
 /* ONLY SHOW ON SMALLER SCREENS */
