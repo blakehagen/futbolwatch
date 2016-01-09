@@ -114,6 +114,8 @@ img {
     height: 513px;
     border: 10px solid #455859;
     box-shadow: 8px 8px 30px #262626;
+    background: #354345;
+    opacity: 0.9;
 }
 
 .main-sidebar {
