@@ -41,6 +41,11 @@ body {
 	align-items: center;
 }
 
+
+::-webkit-scrollbar {
+   display: none;
+}
+
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -106,9 +111,11 @@ img {
 
 .main-wrapper {
     width: 590px;
-    height: 514px;
+    height: 513px;
     border: 10px solid #455859;
     box-shadow: 8px 8px 30px #262626;
+    background: #354345;
+    opacity: 0.9;
 }
 
 .main-sidebar {
@@ -122,12 +129,24 @@ img {
 
 .top {
     width: 410px;
-    height: 67px;
+    height: 66px;
     /*border: 1px solid mediumseagreen;*/
     float: right;
     opacity: 0.9;
     margin: 0;
 }
+
+    .bkgrnd h2 {
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+        margin: 0;
+    }
+    
+    .bkgrnd .fa {
+        text-align: center;
+        font-size: 24px;
+    }
 
 /* ONLY SHOW ON SMALLER SCREENS */
 .top-responsive {
@@ -220,6 +239,7 @@ img {
     height: 360px;
     float: right;
     overflow: auto;
+    -ms-overflow-style: none;
     /*border: 1px solid red;*/
 }
 
@@ -233,14 +253,6 @@ img {
     height: 36px;
     padding-right: 7px;
     /*border: 1px solid lightpink;*/
-}
-
-.row-goals {
-    /*text-align: center;*/
-}
-
-.league-row {
-    /*text-align: center;*/
 }
 
 .row-item {

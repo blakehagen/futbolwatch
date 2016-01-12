@@ -1,4 +1,4 @@
-angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idService, leagueService, upcomingMatchesService, previousMatchService, topScorerService) {
+angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $rootScope, idService, leagueService, upcomingMatchesService, previousMatchService, topScorerService) {
     // Get League ID from idService
     $scope.id = function () {
         $scope.leagueData = idService.getLeagueId();
@@ -17,14 +17,17 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
     }
 
     // Get League Standings
-
     $scope.getStandings = function () {
         if ($scope.leagueData.leagueId == undefined) {
             $scope.toggleInfo = true;
             $scope.activeInfo = true;
             return false;
         } else {
+            if(!$scope.league){
+                $rootScope.loading = true;
+            }
             leagueService.getLeagueData($scope.leagueData.leagueIdKimono).then(function (response) {
+                $rootScope.loading = false;
                 $scope.league = response;
             })
 
@@ -51,7 +54,11 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
+            if(!$scope.next){
+                $rootScope.loading = true;
+            }
             upcomingMatchesService.getNextMatches($scope.leagueData.leagueId).then(function (response) {
+                $rootScope.loading = false;
                 $scope.next = response;
             })
             $scope.toggleNextMatches = true;
@@ -75,7 +82,11 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
+            if(!$scope.previous){
+                $rootScope.loading = true;
+            }
             previousMatchService.getPreviousMatches($scope.leagueData.leagueId).then(function (response) {
+                $rootScope.loading = false;
                 $scope.previous = response;
             })
             $scope.togglePreviousMatches = true;
@@ -99,7 +110,11 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
+            if(!$scope.scorers){
+                $rootScope.loading = true;
+            }
             topScorerService.getTopScorers($scope.leagueData.topScorerId).then(function (response) {
+                $rootScope.loading = false;
                 $scope.scorers = response;
             })
             $scope.toggleScorers = true;
@@ -140,8 +155,8 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, idSer
         $scope.smallMenu = !$scope.smallMenu;
     }
 
-    
-    
-    
-    
+
+
+
+
 });
