@@ -4,7 +4,7 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
         var deferred = $q.defer();
         $http({
             method: 'GET',
-            url:'https://intense-mesa-4543.herokuapp.com/topscorers?league=' + id
+            url:'https://intense-mesa-4543.herokuapp.com/topscorers/' + id
             // url: 'https://www.kimonolabs.com/api/' + id + '?apikey=Gw5PcHFe2RGyDfn2GJlUBynbruB41WWo'
         }).then(function (response) {
             var topScorersData = response.data.results.collection;
