@@ -7,8 +7,8 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
         var deferred = $q.defer();
         $http({
             method: 'GET',
-            // url: 'https://www.kimonolabs.com/api/' + leagueId + '?apikey=Gw5PcHFe2RGyDfn2GJlUBynbruB41WWo',
-            url: 'https://intense-mesa-4543.herokuapp.com/leaguetable/' + leagueId
+            url: 'https://www.kimonolabs.com/api/' + leagueId + '?apikey=Gw5PcHFe2RGyDfn2GJlUBynbruB41WWo',
+            // url: 'https://intense-mesa-4543.herokuapp.com/leaguetable/' + leagueId
             // url: 'http://api.football-data.org/alpha/soccerseasons/' + leagueId + '/leagueTable',
             // headers: { 'X-Auth-Token': '57d24f023e8247aea4badd00e37328dc' }
         }).then(function (response) {
