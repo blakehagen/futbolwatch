@@ -142,6 +142,11 @@ img {
         font-size: 14px;
         margin: 0;
     }
+    
+    .bkgrnd .fa {
+        text-align: center;
+        color: red;
+    }
 
 /* ONLY SHOW ON SMALLER SCREENS */
 .top-responsive {
