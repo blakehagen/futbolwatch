@@ -1,8 +1,14 @@
 angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $rootScope, idService, leagueService, upcomingMatchesService, previousMatchService, topScorerService) {
+    
     // Get League ID from idService
     $scope.id = function () {
         $scope.leagueData = idService.getLeagueId();
+        if ($scope.leagueData = 405) {
+            $scope.championsLeague = "No Table Info for Champions League";
+            $scope.ucl = true;
+        }
     }
+    
     $scope.id();
     
     // Set ng-class to highlight the current active tab view
@@ -21,11 +27,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
         if ($scope.leagueData.leagueId == undefined) {
             $scope.toggleInfo = true;
             $scope.activeInfo = true;
-
-            $scope.championsLeague = "No Table Info for Champions League";
-            $scope.ucl = true;
             return false;
-
         } else {
             if (!$scope.league) {
                 $rootScope.loading = true;
