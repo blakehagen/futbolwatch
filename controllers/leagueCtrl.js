@@ -3,10 +3,6 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
     // Get League ID from idService
     $scope.id = function () {
         $scope.leagueData = idService.getLeagueId();
-        if ($scope.leagueData = 405) {
-            $scope.championsLeague = "No Table Info for Champions League";
-            $scope.ucl = true;
-        }
     }
     
     $scope.id();
