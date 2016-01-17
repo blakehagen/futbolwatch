@@ -59,6 +59,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
     $scope.toggleNextMatches = false;
 
     $scope.getNextMatches = function () {
+        $rootScope.ucl = false;
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
@@ -88,12 +89,12 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
     $scope.togglePreviousMatches = false;
 
     $scope.getPreviousMatches = function () {
+        $rootScope.ucl = false;
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
             if (!$scope.previous) {
                 $rootScope.loading = true;
-                $rootScope.ucl = false;
             }
             previousMatchService.getPreviousMatches($scope.leagueData.leagueId).then(function (response) {
                 $rootScope.loading = false;
@@ -117,6 +118,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
     $scope.toggleScorers = false;
 
     $scope.getScorers = function () {
+        $rootScope.ucl = false;
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
@@ -125,7 +127,6 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
             }
             topScorerService.getTopScorers($scope.leagueData.topScorerId).then(function (response) {
                 $rootScope.loading = false;
-                $rootScope.ucl = false;
                 $scope.scorers = response;
             })
             $scope.toggleScorers = true;
