@@ -29,7 +29,6 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
         if ($scope.leagueData.leagueId === 405) {
             $rootScope.loading = false;
             $rootScope.ucl = true;
-            return false;
         } else {
             if (!$scope.league) {
                 $rootScope.loading = true;
