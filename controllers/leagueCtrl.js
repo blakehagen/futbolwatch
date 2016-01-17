@@ -20,6 +20,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
 
     // Get League Standings
     $scope.getStandings = function () {
+        $rootScope.ucl = false;
         if ($scope.leagueData.leagueId == undefined) {
             $scope.toggleInfo = true;
             $scope.activeInfo = true;
