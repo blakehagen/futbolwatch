@@ -55,8 +55,10 @@
         </div>
 
         <div class="top bkgrnd">
-            <h2 ng-show="loading"><i class="fa fa-circle-o-notch fa-spin"></i></h2>
-            <h2 ng-show="loading">Loading Data ...</h2>
+            <div class="loading" ng-show="loading">
+                <h2><i class="fa fa-circle-o-notch fa-spin"></i></h2>
+                <h2>Loading Data ...</h2>
+            </div>
             <league-standings league="league" ng-show="toggleStandings"></league-standings>
             <upcoming-matches next="next" ng-show="toggleNextMatches"></upcoming-matches>
             <previous-matches previous="previous" ng-show="togglePreviousMatches"></previous-matches>
