@@ -21,11 +21,11 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
         if ($scope.leagueData.leagueId == undefined) {
             $scope.toggleInfo = true;
             $scope.activeInfo = true;
-            // return false;
-        } else if ($scope.leagueData.leagueId === 405) {
+
             $scope.championsLeague = "No Table Info for Champions League";
             $scope.ucl = true;
             return false;
+
         } else {
             if (!$scope.league) {
                 $rootScope.loading = true;
