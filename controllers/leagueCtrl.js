@@ -4,7 +4,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
     $scope.id = function () {
         $scope.leagueData = idService.getLeagueId();
     }
-    
+
     $scope.id();
     
     // Set ng-class to highlight the current active tab view
@@ -23,6 +23,12 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
         if ($scope.leagueData.leagueId == undefined) {
             $scope.toggleInfo = true;
             $scope.activeInfo = true;
+            return false;
+        }
+
+        if ($scope.leagueData.leagueId === 405) {
+            $rootScope.loading = false;
+            $rootScope.ucl = true;
             return false;
         } else {
             if (!$scope.league) {
