@@ -22,8 +22,11 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
             $scope.toggleInfo = true;
             $scope.activeInfo = true;
             return false;
+        } else if ($scope.leagueData.leagueId === 405) {
+            $scope.championsLeague = "No Table Info for Champions League";
+            $scope.ucl = true;
         } else {
-            if(!$scope.league){
+            if (!$scope.league) {
                 $rootScope.loading = true;
             }
             leagueService.getLeagueData($scope.leagueData.leagueIdKimono).then(function (response) {
@@ -54,7 +57,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
-            if(!$scope.next){
+            if (!$scope.next) {
                 $rootScope.loading = true;
             }
             upcomingMatchesService.getNextMatches($scope.leagueData.leagueId).then(function (response) {
@@ -82,7 +85,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
-            if(!$scope.previous){
+            if (!$scope.previous) {
                 $rootScope.loading = true;
             }
             previousMatchService.getPreviousMatches($scope.leagueData.leagueId).then(function (response) {
@@ -110,7 +113,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
-            if(!$scope.scorers){
+            if (!$scope.scorers) {
                 $rootScope.loading = true;
             }
             topScorerService.getTopScorers($scope.leagueData.topScorerId).then(function (response) {
