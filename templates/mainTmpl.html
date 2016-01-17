@@ -59,7 +59,7 @@
                 <h2><i class="fa fa-circle-o-notch fa-spin"></i></h2>
                 <h2>Loading Data ...</h2>
             </div>
-            <div class="loading" ng-show="ucl">
+            <div class="loading" ng-if="ucl">
                 <h2>No Table for Champions League</h2>
             </div>
             <league-standings league="league" ng-show="toggleStandings"></league-standings>
