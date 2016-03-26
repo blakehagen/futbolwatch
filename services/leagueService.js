@@ -9,7 +9,6 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
       method: 'GET',
       url: 'https://intense-mesa-4543.herokuapp.com/standings/' + leagueId
     }).then(function (response) {
-      console.log(response);
       var leagueData = response.data;
       leagueData     = JSON.stringify(leagueData);
       // leagueData     = leagueData.replace(/playedGames/g, 'gamesPlayed');
