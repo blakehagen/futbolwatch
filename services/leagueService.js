@@ -7,8 +7,7 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'GET',
-      url: 'http://localhost:3000/standings/' + leagueId
-      // url: 'https://intense-mesa-4543.herokuapp.com/leaguetable/' + leagueId
+      url: 'https://intense-mesa-4543.herokuapp.com/standings/' + leagueId
     }).then(function (response) {
       console.log(response);
       var leagueData = response.data;
