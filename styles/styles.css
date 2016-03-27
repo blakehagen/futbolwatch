@@ -74,6 +74,16 @@ h2 {
     text-align: center;
 }
 
+    .bkgrnd h2 {
+        margin: 0;
+        line-height: 30px;
+    }
+    
+    .loading {
+        text-align: center;
+        margin-top: 20px;
+    }
+
 h3 {
     font-size: 12px;
     color: #FFF;

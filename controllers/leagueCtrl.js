@@ -1,8 +1,10 @@
 angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $rootScope, idService, leagueService, upcomingMatchesService, previousMatchService, topScorerService) {
+    
     // Get League ID from idService
     $scope.id = function () {
         $scope.leagueData = idService.getLeagueId();
     }
+
     $scope.id();
     
     // Set ng-class to highlight the current active tab view
@@ -22,8 +24,12 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
             $scope.toggleInfo = true;
             $scope.activeInfo = true;
             return false;
+        }
+
+        if ($scope.leagueData.leagueId === 405) {
+            $rootScope.loading = false;
         } else {
-            if(!$scope.league){
+            if (!$scope.league) {
                 $rootScope.loading = true;
             }
             leagueService.getLeagueData($scope.leagueData.leagueIdKimono).then(function (response) {
@@ -54,7 +60,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
-            if(!$scope.next){
+            if (!$scope.next) {
                 $rootScope.loading = true;
             }
             upcomingMatchesService.getNextMatches($scope.leagueData.leagueId).then(function (response) {
@@ -82,7 +88,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
-            if(!$scope.previous){
+            if (!$scope.previous) {
                 $rootScope.loading = true;
             }
             previousMatchService.getPreviousMatches($scope.leagueData.leagueId).then(function (response) {
@@ -110,7 +116,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
         if ($scope.leagueData.leagueId == undefined) {
             return false;
         } else {
-            if(!$scope.scorers){
+            if (!$scope.scorers) {
                 $rootScope.loading = true;
             }
             topScorerService.getTopScorers($scope.leagueData.topScorerId).then(function (response) {
