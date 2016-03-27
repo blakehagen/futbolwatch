@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="waterCoolerFC">
-<script>
-    if (window.location.protocol != "https:")
-    window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
-</script>
+<!--<script>-->
+<!--if (window.location.protocol != "https:")-->
+<!--window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);-->
+<!--</script>-->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0">
 
-    <title>futbolWatch FC</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="./styles/responsive-styles.css">
-    <link rel="icon" type="image/png" href="./assets/favicon.png">
-    <link rel="canonical" href="https://blakehagen.github.io/futbolwatch" />
+  <title>futbolWatch FC</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/responsive-styles.css">
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="canonical" href="https://blakehagen.github.io/futbolwatch"/>
 
 </head>
 
 <body>
 
-        <ui-view></ui-view>
+<ui-view></ui-view>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js'></script>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js'></script>
 
-    <script src='./app.js'></script>
-    <script src='./controllers/leagueCtrl.js'></script>
+<script src='./app.js'></script>
+<script src='./controllers/leagueCtrl.js'></script>
 
-    <script src='./services/leagueService.js'></script>
-    <script src='./services/upcomingMatchesService.js'></script>
-    <script src='./services/previousMatchService.js'></script>
-    <script src='./services/idService.js'></script>
-    <script src='./services/topScorerService.js'></script>
+<script src='./services/leagueService.js'></script>
+<script src='./services/upcomingMatchesService.js'></script>
+<script src='./services/previousMatchService.js'></script>
+<script src='./services/idService.js'></script>
+<script src='./services/topScorerService.js'></script>
 
-    <script src='./directives/leagueStandings/leagueStandingsDirective.js'></script>
-    <script src='./directives/upcomingMatches/upcomingMatchesDirective.js'></script>
-    <script src='./directives/previousMatches/previousMatchDirective.js'></script>
-    <script src='./directives/topScorers/topScorersDirective.js'></script>
+<script src='./directives/leagueStandings/leagueStandingsDirective.js'></script>
+<script src='./directives/upcomingMatches/upcomingMatchesDirective.js'></script>
+<script src='./directives/previousMatches/previousMatchDirective.js'></script>
+<script src='./directives/topScorers/topScorersDirective.js'></script>
 </body>
 
 </html>
