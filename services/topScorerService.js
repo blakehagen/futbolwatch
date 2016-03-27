@@ -4,7 +4,7 @@ angular.module('waterCoolerFC').service('topScorerService', function ($http, $q)
     var deferred = $q.defer();
     $http({
       method: 'GET',
-      url: 'https://intense-mesa-4543.herokuapp.com/topscorers/' + id
+      url: 'https://intense-mesa-4543.herokuapp.com/scorers/' + id
     }).then(function (response) {
       var topScorersData = response.data;
       // Format Names to not be just initial of first name
