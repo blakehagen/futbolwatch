@@ -1,41 +1,43 @@
 <div class="top sub-hdr" ng-show="previous">
-    <div class="row">
-        <div class="filter match-day-filter-title">
-            <h3 class="filter-text">Search Match Day</h3>
-        </div>
-        <select class=" filter match-day-filter" ng-model="matchDay" ng-options="option.matchDay as option.text for option in matchDayOptions">
-        </select>
-        <input type="text" placeholder="Search Team" class="filter team-filter" ng-model="filterTeam">
-        </input>
+  <div class="row">
+    <div class="filter match-day-filter-title">
+      <h3 class="filter-text">Search Match Day</h3>
     </div>
-    <div class="row">
-        <div class="row-item sm-goals">
-            <h3 class="header-text">MD</h3>
-        </div>
-        <div class="row-item team-hdr-results">
-            <h3 class="header-text">HOME</h3>
-        </div>
-        <div class="row-item small results">
-            <h3 class="header-text"></h3>
-        </div>
-        <div class="row-item team-hdr-results">
-            <h3 class="header-text">AWAY</h3>
-        </div>
+    <select class=" filter match-day-filter" ng-model="matchDay"
+            ng-options="option.matchDay as option.text for option in matchDayOptions">
+    </select>
+    <input type="text" placeholder="Search Team" class="filter team-filter" ng-model="filterTeam">
+    </input>
+  </div>
+  <div class="row">
+    <div class="row-item sm-goals">
+      <h3 class="header-text">MD</h3>
     </div>
+    <div class="row-item team-hdr-results">
+      <h3 class="header-text">HOME</h3>
+    </div>
+    <div class="row-item small results">
+      <h3 class="header-text"></h3>
+    </div>
+    <div class="row-item team-hdr-results">
+      <h3 class="header-text">AWAY</h3>
+    </div>
+  </div>
 </div>
 <div class="tbl-wrapper" ng-show="previous">
-    <div class="row" ng-class-even="'even'" ng-class-odd="'odd'" ng-repeat="match in previous | filter: {matchDay: matchDay} : true | filter : filterTeam">
-        <div class="row-item sm-goals">
-            <h3 class="row-text h3-date">{{match.matchDay}}</h3>
-        </div>
-        <div class="row-item team-hdr-results">
-            <h3 class="nxt-text">{{match.homeTeam}}</h3>
-        </div>
-        <div class="row-item small results">
-            <h3 class="nxt-text">{{match.homeTeamGoals}} : {{match.awayTeamGoals}}</h3>
-        </div>
-        <div class="row-item team-hdr-results">
-            <h3 class="nxt-text">{{match.awayTeam}}</h3>
-        </div>
+  <div class="row" ng-class-even="'even'" ng-class-odd="'odd'"
+       ng-repeat="match in previous | filter: {matchDay: matchDay} : true | filter : filterTeam">
+    <div class="row-item sm-goals">
+      <h3 class="row-text h3-date">{{match.matchDay}}</h3>
     </div>
+    <div class="row-item team-hdr-results">
+      <h3 class="nxt-text">{{match.homeTeam}}</h3>
+    </div>
+    <div class="row-item small results">
+      <h3 class="nxt-text">{{match.homeTeamGoals}} : {{match.awayTeamGoals}}</h3>
+    </div>
+    <div class="row-item team-hdr-results">
+      <h3 class="nxt-text">{{match.awayTeam}}</h3>
+    </div>
+  </div>
 </div>

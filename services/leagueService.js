@@ -67,6 +67,7 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
         }
 
         leagueData[i].team = leagueData[i].team.replace('ACF', '');
+        leagueData[i].team = leagueData[i].team.replace('AFC', '');
         leagueData[i].team = leagueData[i].team.replace('CFC', '');
         leagueData[i].team = leagueData[i].team.replace('FC', '');
         leagueData[i].team = leagueData[i].team.replace('CF', '');
