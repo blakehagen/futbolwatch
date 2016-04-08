@@ -30,7 +30,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
 
     if ($scope.leagueData.leagueId === 405) {
       $rootScope.loading = false;
-      $rootScope.noData  = true;
+      $rootScope.noData  = false;
     } else {
       if (!$scope.league) {
         $rootScope.loading = true;
