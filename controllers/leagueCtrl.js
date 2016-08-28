@@ -36,7 +36,6 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
         $rootScope.loading = true;
       }
       leagueService.getLeagueData($scope.leagueData.leagueId).then(function (response) {
-        console.log('response:::: ', response);
         $rootScope.loading = false;
         $scope.league      = response;
       });
