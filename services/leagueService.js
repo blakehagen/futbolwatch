@@ -4,16 +4,16 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
     if (leagueId === null) {
       return false;
     }
-    // var deferred = $q.defer();
-    return $http({
+    var deferred = $q.defer();
+    $http({
       method: 'GET',
       url: 'https://intense-mesa-4543.herokuapp.com/standings/' + leagueId
     }).then(function (response) {
 
-      if (leagueId === 440) {
-        return response;
+      if(leagueId === 440){
+        deferred.resolve(response);
+        return deferred.promise;
       }
-
 
       var leagueData = response.data;
 
@@ -87,8 +87,8 @@ angular.module('waterCoolerFC').service('leagueService', function ($http, $q) {
           gamesPlayed: leagueData[i].gamesPlayed,
         });
       }
-      return leagueStandings;
+      deferred.resolve(leagueStandings)
     })
-    // return deferred.promise
+    return deferred.promise
   }
 });
