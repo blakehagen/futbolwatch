@@ -3,7 +3,7 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
         if ($stateParams.league === 'epl') {
             return {
                 leagueIdKimono: 'dv41vq9a',
-                leagueId: 398,
+                leagueId: 426,
                 leagueLogoPath: './assets/optimized/epl-compressor.png',
                 leagueHeader: "ENGLISH PREMIER LEAGUE",
                 topScorerId: 'ce15ltey',
@@ -13,7 +13,7 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
         } else if ($stateParams.league === 'spanish-primera') {
             return {
                 leagueIdKimono: 'abq5nqls',
-                leagueId: 399,
+                leagueId: 436,
                 leagueLogoPath: './assets/optimized/laliga-compressor.png',
                 leagueHeader: "SPANISH PRIMERA",
                 topScorerId: 'daaqk8d0',
@@ -23,7 +23,7 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
         } else if ($stateParams.league === 'bundesliga') {
             return {
                 leagueIdKimono: '379n3ymy',
-                leagueId: 394,
+                leagueId: 430,
                 leagueLogoPath: './assets/optimized/bundesliga-compressor.png',
                 leagueHeader: "GERMAN BUNDESLIGA",
                 topScorerId: '3vb8ywkg',
@@ -33,7 +33,7 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
         } else if ($stateParams.league === 'eredivisie') {
             return {
                 leagueIdKimono: 'adu2wboi',
-                leagueId: 404,
+                leagueId: 433,
                 leagueLogoPath: './assets/optimized/eredivisie-compressor.png',
                 leagueHeader: "DUTCH EREDIVISIE",
                 topScorerId: 'a71bgaeg',
@@ -43,7 +43,7 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
         } else if ($stateParams.league === 'serie-a') {
             return {
                 leagueIdKimono: 'ejr3kwbo',
-                leagueId: 401,
+                leagueId: 438,
                 leagueLogoPath: './assets/optimized/serie-a.png',
                 leagueHeader: "ITALY SERIE A",
                 topScorerId: 'dp2cqh4g',
@@ -53,7 +53,7 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
         } else if ($stateParams.league === 'portugal-primeira') {
             return {
                 leagueIdKimono: '40dxlnkq',
-                leagueId: 402,
+                leagueId: 439,
                 leagueLogoPath: './assets/optimized/portugal-compressor.png',
                 leagueHeader: "PORTUGAL PRIMEIRA",
                 topScorerId: 'adx5ccsw',
@@ -63,7 +63,7 @@ angular.module('waterCoolerFC').service('idService', function ($stateParams) {
         } else if ($stateParams.league === 'ligue1') {
             return {
                 leagueIdKimono: 'a20ppviy',
-                leagueId: 396,
+                leagueId: 434,
                 leagueLogoPath: './assets/optimized/ligue1-compressor.png',
                 leagueHeader: "FRANCE LIGUE 1",
                 topScorerId: '4j8yjehk',
