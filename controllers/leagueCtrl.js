@@ -5,7 +5,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
   // Get League ID from idService
   $scope.id = function () {
     $scope.leagueData = idService.getLeagueId();
-  }
+  };
 
   $scope.id();
 
@@ -28,7 +28,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
       return false;
     }
 
-    if ($scope.leagueData.leagueId === 405) {
+    if ($scope.leagueData.leagueId === 440) {
       $rootScope.loading = false;
       $rootScope.noData  = false;
     } else {
@@ -38,7 +38,7 @@ angular.module('waterCoolerFC').controller('leagueCtrl', function ($scope, $root
       leagueService.getLeagueData($scope.leagueData.leagueId).then(function (response) {
         $rootScope.loading = false;
         $scope.league      = response;
-      })
+      });
 
       $scope.toggleStandings       = true;
       $scope.toggleNextMatches     = false;
