@@ -1,71 +1,83 @@
 <div class="page-wrap">
-    <div class="main-wrapper" ng-class="smallMenu ? 'mainExtend' : 'mainNormal'">
-        <div class="main-sidebar">
-            <div class="logo">
-                <img ng-src="{{leagueData.leagueLogoPath}}">
-            </div>
-            <div class="tab" ng-class="activeTable ? 'activeTab' : 'notActiveTab'" ng-click="getStandings()">
-                <h2>TABLE</h2>
-            </div>
-            <div class="tab" ng-class="activeFixtures ? 'activeTab' : 'notActiveTab'" ng-click="getNextMatches()">
-                <h2>FIXTURES</h2>
-            </div>
-            <div class="tab" ng-class="activeResults ? 'activeTab' : 'notActiveTab'" ng-click="getPreviousMatches()">
-                <h2>RESULTS</h2>
-            </div>
-            <div class="tab" ng-class="activeScorers ? 'activeTab' : 'notActiveTab'" ng-click="getScorers()">
-                <h2>TOP SCORERS</h2>
-            </div>
-            <a href="#/info">
-                <div class="tab" ng-class="activeInfo ? 'activeTab' : 'notActiveTab'">
-                    <h2>INFO</h2>
-                </div>
-            </a>
+  <div class="main-wrapper" ng-class="smallMenu ? 'mainExtend' : 'mainNormal'">
+    <div class="main-sidebar">
+      <div class="logo">
+        <img ng-src="{{leagueData.leagueLogoPath}}">
+      </div>
+      <div class="tab" ng-class="activeTable ? 'activeTab' : 'notActiveTab'" ng-click="getStandings()">
+        <h2>TABLE</h2>
+      </div>
+      <div class="tab" ng-class="activeFixtures ? 'activeTab' : 'notActiveTab'" ng-click="getNextMatches()">
+        <h2>FIXTURES</h2>
+      </div>
+      <div class="tab" ng-class="activeResults ? 'activeTab' : 'notActiveTab'" ng-click="getPreviousMatches()">
+        <h2>RESULTS</h2>
+      </div>
+      <div class="tab" ng-class="activeScorers ? 'activeTab' : 'notActiveTab'" ng-click="getScorers()">
+        <h2>TOP SCORERS</h2>
+      </div>
+      <a href="#/info">
+        <div class="tab" ng-class="activeInfo ? 'activeTab' : 'notActiveTab'">
+          <h2>INFO</h2>
         </div>
-        <div class="top title">
-            <h1><a href="{{leagueData.previousTeam}}"><span><&nbsp;</span></a> {{leagueData.leagueHeader}} <a href="{{leagueData.nextTeam}}"><span>&nbsp;></span></a></h1>
-        </div>
-
-        <!-- This is for when the screen is smaller -->
-        <div class="top sub-hdr top-responsive">
-            <div class="img-container left">
-                <img ng-src="{{leagueData.leagueLogoPath}}">
-            </div>
-            <div class="img-container">
-                <i class="fa fa-bars fa-2x menu" ng-click="toggleSmallMenu()"></i>
-            </div>
-            <div class="img-container page-id">
-                <a href="#/info"><h6>futbolWatch FC</h6></a>
-            </div>
-        </div>
-        <!-- Small Menu when clicked -->
-        <div class="top responsive-menu" ng-show="smallMenu">
-            <div class="sm-menu-btn" ng-class="activeTable ? 'active-sm-button' : 'sm-button-non-active'" ng-click="getStandings()">
-                <h6 class="sm-menu-btn-text">TABLE</h6>
-            </div>
-            <div class="sm-menu-btn" ng-class="activeFixtures ? 'active-sm-button' : 'sm-button-non-active'" ng-click="getNextMatches()">
-                <h6 class="sm-menu-btn-text">FIXTURES</h6>
-            </div>
-            <div class="sm-menu-btn" ng-class="activeResults ? 'active-sm-button' : 'sm-button-non-active'" ng-click="getPreviousMatches()">
-                <h6 class="sm-menu-btn-text">RESULTS</h6>
-            </div>
-            <div class="sm-menu-btn" ng-class="activeScorers ? 'active-sm-button' : 'sm-button-non-active'" ng-click="getScorers()">
-                <h6 class="sm-menu-btn-text">SCORERS</h6>
-            </div>
-        </div>
-
-        <div class="top bkgrnd">
-            <div class="loading" ng-show="loading">
-                <h2><i class="fa fa-circle-o-notch fa-spin"></i></h2>
-                <h2>Loading Data ...</h2>
-            </div>
-            <league-standings league="league" ng-show="toggleStandings"></league-standings>
-            <upcoming-matches next="next" ng-show="toggleNextMatches"></upcoming-matches>
-            <previous-matches previous="previous" ng-show="togglePreviousMatches"></previous-matches>
-            <top-scorers scorers="scorers" ng-show="toggleScorers"></top-scorers>
-        </div>
+      </a>
     </div>
+    <div class="top title">
+      <h1><a href="{{leagueData.previousTeam}}"><span><&nbsp;</span></a> {{leagueData.leagueHeader}} <a
+        href="{{leagueData.nextTeam}}"><span>&nbsp;></span></a></h1>
+    </div>
+
+    <!-- This is for when the screen is smaller -->
+    <div class="top sub-hdr top-responsive">
+      <div class="img-container left">
+        <img ng-src="{{leagueData.leagueLogoPath}}">
+      </div>
+      <div class="img-container">
+        <i class="fa fa-bars fa-2x menu" ng-click="toggleSmallMenu()"></i>
+      </div>
+      <div class="img-container page-id">
+        <a href="#/info"><h6>futbolWatch FC</h6></a>
+      </div>
+    </div>
+    <!-- Small Menu when clicked -->
+    <div class="top responsive-menu" ng-show="smallMenu">
+      <div class="sm-menu-btn" ng-class="activeTable ? 'active-sm-button' : 'sm-button-non-active'"
+           ng-click="getStandings()">
+        <h6 class="sm-menu-btn-text">TABLE</h6>
+      </div>
+      <div class="sm-menu-btn" ng-class="activeFixtures ? 'active-sm-button' : 'sm-button-non-active'"
+           ng-click="getNextMatches()">
+        <h6 class="sm-menu-btn-text">FIXTURES</h6>
+      </div>
+      <div class="sm-menu-btn" ng-class="activeResults ? 'active-sm-button' : 'sm-button-non-active'"
+           ng-click="getPreviousMatches()">
+        <h6 class="sm-menu-btn-text">RESULTS</h6>
+      </div>
+      <div class="sm-menu-btn" ng-class="activeScorers ? 'active-sm-button' : 'sm-button-non-active'"
+           ng-click="getScorers()">
+        <h6 class="sm-menu-btn-text">SCORERS</h6>
+      </div>
+    </div>
+
+    <div class="top bkgrnd">
+      <div class="spinner" ng-show="loading">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+      <div class="loading" ng-show="loading">
+        <h2>Loading Data</h2>
+      </div>
+      <div class="loading" ng-show="noData">
+        <h2>Not available for Champions League</h2>
+      </div>
+      <league-standings league="league" ng-show="toggleStandings"></league-standings>
+      <upcoming-matches next="next" ng-show="toggleNextMatches"></upcoming-matches>
+      <previous-matches previous="previous" ng-show="togglePreviousMatches"></previous-matches>
+      <top-scorers scorers="scorers" ng-show="toggleScorers"></top-scorers>
+    </div>
+  </div>
 </div>
 <div class="footer">
-    <h6>futbolWatch FC &copy; 2015 - Blake Hagen</h6>
+  <h6>futbolWatch FC &copy; 2015-2016 - <a href="http://blakehagen.io" target="_blank">Blake Hagen</a></h6>
 </div>
